@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --heade-nav: #f4f400;
+  --body: #fffff6;
+  --box_shadow: 2px 2px 10px rgba(211, 211, 211, 0.591);
+}
+button {
+  background: none;
+  border: none;
+}
+#parametr {
+  padding: 10px;
+}
+.Details {
+  display: flex;
+  gap: 13px;
+}
+#Project_details,
+#User_details {
+  background-color: var(--heade-nav);
+  border-radius: 5px;
+  height: 30px;
+  width: 135px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#Project_details {
+  box-shadow: var(--box_shadow);
+}
+.form-label {
+  font-size: 17px;
+}
+.project_details {
+  margin-top: 16px;
+  padding-inline: 50px;
+}
