@@ -57,3 +57,34 @@ header{
         }
     }
 }
+button {
+  background: none;
+  border: none;
+}
+#parametr {
+  padding: 10px;
+}
+#Project_details .Details {
+  display: flex;
+  gap: 13px;
+}
+#Project_details,
+#User_details {
+  background-color: var(--heade-nav);
+  border-radius: 5px;
+  height: 30px;
+  width: 135px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#Project_details {
+  box-shadow: var(--box_shadow);
+}
+#Project_details .form-label {
+  font-size: 17px;
+}
+#Project_details .project_details {
+  margin-top: 16px;
+  padding-inline: 50px;
+}
