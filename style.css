@@ -8,17 +8,17 @@
     --heade-nav: #FFFFFB;
     --body: #FFFFF6;
     --box_shadow: 2px 2px 10px rgba(211, 211, 211, 0.591);
+    --active:#FFFFD9;
 }
 body{
     background-color: var(--body) !important;
 }
-.left-header-nav ul li a{
-    text-decoration: none;
-    color: #707070;
-    font-weight: bold;
-}
-.right-header-search .search_input, .right-header-search img{
+/*Header and Home page style*/
+.right-header-search .search_input{
     box-shadow: var(--box_shadow);
+}
+.right-header-search img{
+    box-shadow: 3px 2px 10px rgba(110, 110, 110, 0.591);
 }
 header{
     background-color: var(--heade-nav);
@@ -26,12 +26,38 @@ header{
     padding: 0 20px;
     box-shadow: var(--box_shadow);
 }
+#header_vertical{
+    min-height: calc( 100vh - 80px );
+    background-color: var(--heade-nav);
+    box-shadow: var(--box_shadow);
+}
+.board_info{
+    background: var(--body);
+}
+.text-md{
+    font-size: 25px;
+}
+.navigation_pages img{
+    width: 10%;
+}
+.ml-2{
+    margin-left: 20px;
+}
+.navigation_pages .active,
+.navigation_pages li:hover{
+    background: var(--active);
+    box-shadow: var(--box_shadow);
+    cursor: pointer;
+}
 @media screen and (max-width : 1080px) {
     .d-flex .left-header-nav {
         display: none !important;
     }
     .left-header .w-25{
         width: 50% !important;
+    }   
+    #main_container #header_vertical{
+        display: none;
     }
     @media screen and (max-width:780px) {
         .d-flex .right-header-search{
@@ -43,6 +69,9 @@ header{
         .d-flex .d-none{
             display: block !important;
             box-shadow: var(--box_shadow);
+        }
+        .right-header-nav img{
+            height: 100%;
         }
     }
     @media screen and (max-width : 460px) {
