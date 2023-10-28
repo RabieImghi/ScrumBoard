@@ -60,7 +60,22 @@ header{
 .user_active, .user_group:hover{
     box-shadow: var(--box_shadow);
 }
+.ferme-d-block{
+    display: none;
+}
+@keyframes fade-in-menu {
+    0% { width: 0; } 100%{width: 70%;}
+}
 @media screen and (max-width : 1080px) {
+    .d-md-none{
+        display: flex !important;
+    }
+    .ferme-d-block{
+        display: block;
+    }
+    #filter{
+        background-color: rgba(73, 73, 73, 0.247) !important;
+    }
     .d-flex .left-header-nav {
         display: none !important;
     }
@@ -69,9 +84,16 @@ header{
     }   
     .user_story {
         min-width: 300px !important;
+        max-height: 40vh;
     }
     #main_container #header_vertical{
         display: none;
+    }
+    #main_container .header_vertical_mobile{
+        display: block !important;
+        position: absolute;
+        width: 70%;
+        animation: fade-in-menu 0.3s;
     }
     @media screen and (max-width:790px) {
         .d-flex .right-header-search{
