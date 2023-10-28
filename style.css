@@ -10,6 +10,7 @@
     --box_shadow: 2px 2px 10px rgba(211, 211, 211, 0.591);
     --active:#FFFFD9;
     --btn:#2196F3;
+    --save_color:#08DC40;
 }
 body{
     background-color: var(--body) !important;
@@ -44,6 +45,9 @@ header{
 .ml-2{
     margin-left: 20px;
 }
+.ml-1 {
+    margin-left: 10px;
+}
 .navigation_pages .active,
 .navigation_pages li:hover{
     background: var(--active);
@@ -63,10 +67,13 @@ header{
     .left-header .w-25{
         width: 50% !important;
     }   
+    .user_story {
+        min-width: 300px !important;
+    }
     #main_container #header_vertical{
         display: none;
     }
-    @media screen and (max-width:780px) {
+    @media screen and (max-width:790px) {
         .d-flex .right-header-search{
             display: none !important;
         }
@@ -97,8 +104,12 @@ header{
             width: 34px;
             height: 34px;
         }
+        .user_story {
+            min-width:  250px !important;
+        }
     }
 }
+/* Parametere Page */
 button {
   background: none;
   border: none;
