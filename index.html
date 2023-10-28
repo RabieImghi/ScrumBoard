@@ -58,8 +58,60 @@
                 </ul>
             </nav>
         </section>
-        <section id="" class="col p-4">
-                
+        <section id="home_page" class="col p-4">
+            <div class="home_content ">
+                <span class="text-secondary">Project > Scrum Board</span>
+                <div class="sprint_info row mt-4">
+                    <h4 class="col-5 col-md-8 fw-bold text-secondary">Sprint Name</h4>
+                    <div class="timer_sprint col text-end">
+                        <img src="images/clock.png" style="width: 6%;" alt="timer"> 
+                        <span class="text-secondary">10 days remaining</span>
+                        <button class="fw-bold btn ml-2" style="background: var(--btn); color: white;">Finish sprint</button>
+                    </div>
+                </div>
+                <div class="users mt-4 d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="user_infos d-flex flex-wrap gap-1" style="min-width: 50%;">
+                        <div class="home-search2 d-flex mt-1">
+                            <input type="search" class="form-control search_input" style="border-radius: 5px 0 0 5px; outline: none;" id="search" placeholder="search">
+                            <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
+                        </div>
+                        <div class="users_team d-flex flex-wrap">
+                            <div class="user_group p-2 ml-2 mt-1 user_active" style="min-width: 120px; max-width: 120px;">
+                                <img src="images/user.png" style="width: 20%;" alt="user">
+                                <span class="text-secondary">user name</span>
+                            </div>
+                            <div class="user_group p-2 ml-2 mt-1" style="min-width: 120px; max-width: 120px;">
+                                <img src="images/user.png" style="width: 20%;" alt="user">
+                                <span class="text-secondary">user name</span>
+                            </div>
+                            <div class="user_group p-2 ml-2 mt-1" style="min-width: 120px; max-width: 120px;">
+                                <img src="images/user.png" style="width: 20%;" alt="user">
+                                <span class="text-secondary">user name</span>
+                            </div>
+                            <div class="text-center rounded-1 p-2 ml-2 mt-1" style="min-width: 60px; max-width: 60px; background: var(--btn);">
+                                <img src="images/add-user.png" style="width: 60%;" alt="user">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filtre d-flex flex-wrap gap-3 fw-bold">
+                        <label class="mt-1">
+                            <span class="text-secondary">Group By</span>
+                            <select style="background: var(--active); border: none; outline: none;" class="h-100 fw-bold text-secondary rounded-1">
+                                <option value="Nothing">Nothing  </option>
+                                <option value="To_Do">To Do</option>
+                                <option value="Doing">Doing</option>
+                                <option value="Finish">Finish</option>
+                            </select>
+                        </label>
+                        <div class="user_group p-2 mt-1">
+                            <span class="text-secondary">user name</span>
+                        </div>
+                        <div class="user_group p-2 mt-1">
+                            <span class="text-secondary">user name</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 <script src="script.js"></script>
