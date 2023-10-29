@@ -44,6 +44,9 @@ header {
 .ml-2 {
   margin-left: 20px;
 }
+.ml-1 {
+  margin-left: 10px;
+}
 .navigation_pages .active,
 .navigation_pages li:hover {
   background: var(--active);
@@ -101,6 +104,7 @@ header {
     }
   }
 }
+/* Parametere Page */
 button {
   background: none;
   border: none;
@@ -146,18 +150,37 @@ button {
   justify-content: center;
 }
 .user_picker {
+  position: relative;
   border: 1px solid;
   height: 40px;
   border-radius: 10px;
   background-color: white;
-  overflow-y: hidden;
+  overflow: hidden;
+  padding: 5px;
+}
+.user_picking {
+  border: 1px solid;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  padding: 5px;
 }
 .user_picker ul {
-  padding: 4px;
   padding-left: 10px;
   margin-bottom: 0;
 }
 .user_picker li {
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 10px;
+}
+.user_picking ul {
+  padding: 4px;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+.user_picking li {
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
