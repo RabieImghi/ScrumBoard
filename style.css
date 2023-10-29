@@ -71,9 +71,7 @@ header {
     display: none;
 }
 
-@keyframes fade-in-menu {
-    0% { width: 0; } 100%{width: 70%;}
-}
+
 @media screen and (max-width : 1080px) {
     .navigation_pages img{
         width: 5%;
@@ -92,6 +90,7 @@ header {
         display: block;
     }
     #filter{
+        inset: 0;
         background-color: rgba(73, 73, 73, 0.247) !important;
     }
     .d-flex .left-header-nav {
@@ -111,7 +110,6 @@ header {
         display: block !important;
         position: absolute;
         width: 80%;
-        animation: fade-in-menu 0.3s;
     }
     @media screen and (max-width:790px) {
         .d-flex .right-header-search{
