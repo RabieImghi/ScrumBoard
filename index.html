@@ -11,9 +11,8 @@
       crossorigin="anonymous" />
     <title>Document</title>
   </head>
-  <body onload="drog_drop_function()">
-    <header
-      class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
+  <body>
+    <header class="d-flex justify-content-between align-items-center gap-6">
       <div class="left-header d-flex align-items-center gap-4">
         <div class="left-header-logo w-25">
           <img src="images/logo.png" class="w-100" alt="logo" />
@@ -89,26 +88,14 @@
       </div>
     </header>
     <main id="main_container" class="row" style="width: 100%">
-      <div
-        id="filter"
-        onclick="close_menu()"
-        class="position-absolute w-100 h-100 d-none"></div>
       <section id="header_vertical" class="col-3 pt-4 ml-2">
-        <div class="d-flex justify-content-between">
-          <div
-            class="board_info p-2 rounded-1 border d-flex gap-3 align-items-center">
-            <img src="images/user.png" alt="projet" class="w-25" />
-            <div class="board_desc">
-              <h4 class="fw-bold text-secondary">Scrum Board</h4>
-              <span class="text-secondary">Projet logiciel</span>
-            </div>
+        <div
+          class="board_info p-2 rounded-1 border d-flex gap-3 align-items-center">
+          <img src="images/user.png" alt="projet" class="w-25" />
+          <div class="board_desc">
+            <h4 class="fw-bold text-secondary">Scrum Board</h4>
+            <span class="text-secondary">Projet logiciel</span>
           </div>
-          <img
-            src="images/ferme.png"
-            class="ferme-d-block"
-            height="50px"
-            onclick="close_menu()"
-            alt="" />
         </div>
         <h3 class="text-secondary pt-4 text-md fw-bold">PLANIFICATION</h3>
         <nav class="col">
@@ -156,12 +143,6 @@
         </nav>
       </section>
       <section id="home_page" class="col p-4">
-        <img
-          src="images/menu2.png"
-          width="50px"
-          class="ferme-d-block"
-          onclick="affiche()"
-          alt="menu" />
         <div class="home_content">
           <span class="text-secondary">Project > Scrum Board</span>
           <div class="sprint_info row mt-4">
@@ -197,19 +178,19 @@
               <div class="users_team d-flex flex-wrap">
                 <div
                   class="user_group p-2 ml-2 mt-1 user_active"
-                  style="min-width: 120px; max-width: 120px; cursor: pointer">
+                  style="min-width: 120px; max-width: 120px">
                   <img src="images/user.png" style="width: 20%" alt="user" />
                   <span class="text-secondary">user name</span>
                 </div>
                 <div
                   class="user_group p-2 ml-2 mt-1"
-                  style="min-width: 120px; max-width: 120px; cursor: pointer">
+                  style="min-width: 120px; max-width: 120px">
                   <img src="images/user.png" style="width: 20%" alt="user" />
                   <span class="text-secondary">user name</span>
                 </div>
                 <div
                   class="user_group p-2 ml-2 mt-1"
-                  style="min-width: 120px; max-width: 120px; cursor: pointer">
+                  style="min-width: 120px; max-width: 120px">
                   <img src="images/user.png" style="width: 20%" alt="user" />
                   <span class="text-secondary">user name</span>
                 </div>
@@ -239,226 +220,11 @@
                   <option value="Finish">Finish</option>
                 </select>
               </label>
-              <div class="user_group p-2 mt-1" style="cursor: pointer">
+              <div class="user_group p-2 mt-1">
                 <span class="text-secondary">user name</span>
               </div>
-              <div class="user_group p-2 mt-1" style="cursor: pointer">
+              <div class="user_group p-2 mt-1">
                 <span class="text-secondary">user name</span>
-              </div>
-            </div>
-          </div>
-          <div class="users_story w-100 d-flex flex-wrap">
-            <div
-              id="todo_box"
-              class="user_story p-3 ml-2 mt-4 overflow-y-scroll"
-              style="
-                box-shadow: var(--box_shadow);
-                min-width: 350px;
-                height: 60vh;
-                background: white;
-              ">
-              <h3 class="fw-bold text-secondary">To Do</h3>
-              <div
-                class="story p-2 rounded-1 mt-3"
-                draggable="true"
-                style="
-                  max-width: 300px;
-                  background-color: var(--body);
-                  box-shadow: var(--box_shadow);
-                ">
-                <span
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio animi cumque deleniti quia, atque sapiente laborum
-                  laudantium ipsa, natus rem</span
-                >
-                <div class="story_info d-flex justify-content-between mt-2">
-                  <div class="d-flex align-items-end">
-                    <img
-                      src="images/saves.png"
-                      style="background: var(--save_color); padding: 4px 0"
-                      width="21px"
-                      draggable="false"
-                      alt="save" />
-                    <span class="ml-1 fw-bold text-secondary">KR-01</span>
-                  </div>
-                  <img
-                    src="images/user.png"
-                    width="30px"
-                    draggable="false"
-                    alt="user" />
-                </div>
-              </div>
-              <div
-                class="story p-2 rounded-1 mt-3"
-                draggable="true"
-                style="
-                  max-width: 300px;
-                  background-color: var(--body);
-                  box-shadow: var(--box_shadow);
-                ">
-                <span
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio animi cumque deleniti quia, atque sapiente laborum
-                  laudantium ipsa, natus rem</span
-                >
-                <div class="story_info d-flex justify-content-between mt-2">
-                  <div class="d-flex align-items-end">
-                    <img
-                      src="images/saves.png"
-                      style="background: var(--save_color); padding: 4px 0"
-                      width="21px"
-                      draggable="false"
-                      alt="save" />
-                    <span class="ml-1 fw-bold text-secondary">KR-02</span>
-                  </div>
-                  <img
-                    src="images/user.png"
-                    width="30px"
-                    draggable="false"
-                    alt="user" />
-                </div>
-              </div>
-              <div
-                class="story p-2 rounded-1 mt-3"
-                draggable="true"
-                style="
-                  max-width: 300px;
-                  background-color: var(--body);
-                  box-shadow: var(--box_shadow);
-                ">
-                <span
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio animi cumque deleniti quia, atque sapiente laborum
-                  laudantium ipsa, natus rem</span
-                >
-                <div class="story_info d-flex justify-content-between mt-2">
-                  <div class="d-flex align-items-end">
-                    <img
-                      src="images/saves.png"
-                      style="background: var(--save_color); padding: 4px 0"
-                      width="21px"
-                      draggable="false"
-                      alt="save" />
-                    <span class="ml-1 fw-bold text-secondary">KR-03</span>
-                  </div>
-                  <img
-                    src="images/user.png"
-                    width="30px"
-                    draggable="false"
-                    alt="user" />
-                </div>
-              </div>
-            </div>
-            <div
-              id="doing_box"
-              class="user_story p-3 ml-2 mt-4 overflow-y-scroll"
-              style="
-                box-shadow: var(--box_shadow);
-                min-width: 350px;
-                height: 60vh;
-                background: white;
-              ">
-              <h3 class="fw-bold text-secondary">Doing</h3>
-              <div
-                class="story p-2 rounded-1 mt-3"
-                draggable="true"
-                style="
-                  max-width: 300px;
-                  background-color: var(--body);
-                  box-shadow: var(--box_shadow);
-                ">
-                <span
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio animi cumque deleniti quia, atque sapiente laborum
-                  laudantium ipsa, natus rem</span
-                >
-                <div class="story_info d-flex justify-content-between mt-2">
-                  <div class="d-flex align-items-end">
-                    <img
-                      src="images/saves.png"
-                      style="background: var(--save_color); padding: 4px 0"
-                      width="21px"
-                      draggable="false"
-                      alt="save" />
-                    <span class="ml-1 fw-bold text-secondary">KR-04</span>
-                  </div>
-                  <img
-                    src="images/user.png"
-                    width="30px"
-                    draggable="false"
-                    alt="user" />
-                </div>
-              </div>
-              <div
-                class="story p-2 rounded-1 mt-3"
-                draggable="true"
-                style="
-                  max-width: 300px;
-                  background-color: var(--body);
-                  box-shadow: var(--box_shadow);
-                ">
-                <span
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio animi cumque deleniti quia, atque sapiente laborum
-                  laudantium ipsa, natus rem</span
-                >
-                <div class="story_info d-flex justify-content-between mt-2">
-                  <div class="d-flex align-items-end">
-                    <img
-                      src="images/saves.png"
-                      style="background: var(--save_color); padding: 4px 0"
-                      width="21px"
-                      draggable="false"
-                      alt="save" />
-                    <span class="ml-1 fw-bold text-secondary">KR-05</span>
-                  </div>
-                  <img
-                    src="images/user.png"
-                    width="30px"
-                    draggable="false"
-                    alt="user" />
-                </div>
-              </div>
-            </div>
-            <div
-              id="finish_box"
-              class="user_story p-3 ml-2 mt-4 overflow-y-scroll"
-              style="
-                box-shadow: var(--box_shadow);
-                min-width: 350px;
-                height: 60vh;
-                background: white;
-              ">
-              <h3 class="fw-bold text-secondary">Finiched</h3>
-              <div
-                class="story p-2 rounded-1 mt-3"
-                draggable="true"
-                style="
-                  max-width: 300px;
-                  background-color: var(--body);
-                  box-shadow: var(--box_shadow);
-                ">
-                <span
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio animi cumque deleniti quia, atque sapiente laborum
-                  laudantium ipsa, natus rem</span
-                >
-                <div class="story_info d-flex justify-content-between mt-2">
-                  <div class="d-flex align-items-end">
-                    <img
-                      src="images/saves.png"
-                      style="background: var(--save_color); padding: 4px 0"
-                      width="21px"
-                      draggable="false"
-                      alt="save" />
-                    <span class="ml-1 fw-bold text-secondary">KR-06</span>
-                  </div>
-                  <img
-                    src="images/user.png"
-                    width="30px"
-                    draggable="false"
-                    alt="user" />
-                </div>
               </div>
             </div>
           </div>
