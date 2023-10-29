@@ -42,6 +42,12 @@ function close_menu(){
     filter.classList.add('d-none')
     menu_vertical.classList.remove("header_vertical_mobile");
 }
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
 
 //****page parametre
 const editPictureButton = document.getElementById("editPicture");
