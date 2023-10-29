@@ -18,10 +18,25 @@
     <section id="parametr">
       <p>Projets > parameter de project</p>
       <div class="Details">
-        <button id="Project_details">Project_details</button>
-        <button id="User_details">User_details</button>
+        <button id="Project_details">Project details</button>
+        <button id="User_details">User details</button>
       </div>
       <div class="project_details" style="border: 1px solid">
+        <div class="Project_pic">
+          <img
+            src="images/repair.png"
+            alt="repair"
+            id=""
+            style="width: 100px; margin-bottom: 1rem !important" /><br />
+        </div>
+        <button type="button" id="editPicture" style="font-weight: bold">
+          Edit Picture
+        </button>
+        <input
+          type="file"
+          id="hiddenFileInput"
+          style="display: none"
+          accept=".jpg, .png" />
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Name</label
           ><br />
@@ -43,16 +58,76 @@
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
-            >Description</label
+            >Project Manager</label
           ><br />
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">
-                <div style=""></div>
+          <!-- <select name="image-select">
+            <option value="option1">
+              <div>
+                <p>ali</p>
+                <img
+                  src="images/user.png"
+                  alt="Image_1"
+                  style="width: 10px; height: 10px" />
+              </div>
             </option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+            <option value="image2.png">
+              <img src="image2.png" alt="Image 2" />
+            </option>
+            <option value="image3.png">
+              <img src="image3.png" alt="Image 3" />
+            </option>
+          </select> -->
+          <div class="user_picker">
+            <ul>
+              <li>
+                <div id="user0">
+                  <img
+                    src="images/user.png"
+                    alt="Image_1"
+                    style="height: 30px" />
+                  <span>Rabie Ait Mghir</span>
+                </div>
+              </li>
+              <li>
+                <div id="user1">
+                  <img
+                    src="images/user.png"
+                    alt="Image_1"
+                    style="height: 30px" />
+                  <span>Rabie Ait Mghir</span>
+                </div>
+              </li>
+              <li>
+                <div id="user2">
+                  <img
+                    src="images/user.png"
+                    alt="Image_1"
+                    style="height: 30px" />
+                  <span>Rabie Ait Mghir</span>
+                </div>
+              </li>
+              <li>
+                <div id="user3">
+                  <img
+                    src="images/user.png"
+                    alt="Image_1"
+                    style="height: 30px" />
+                  <span>Rabie Ait Mghir</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Responsable par défaut </label
+            ><br />
+            <input
+              type="email"
+              class="h-25 form-control"
+              id="exampleFormControlInput1"
+              placeholder="Description" />
+          </div>
+        </div>
       </div>
     </section>
     <script src="script.js"></script>
