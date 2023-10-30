@@ -174,11 +174,12 @@ button {
 #parametr {
   padding: 10px;
 }
-#Project_details .Details {
+
+#parametr #Project_details .Details {
   display: flex;
   gap: 13px;
 }
-#Project_details,
+#parametr #Project_details,
 #User_details {
   background-color: var(--heade-nav);
   border-radius: 5px;
@@ -188,56 +189,66 @@ button {
   font-weight: bold;
   margin-top: 20px;
 }
-#Project_details {
+#parametr #Project_details {
   box-shadow: var(--box_shadow);
 }
-#Project_details .form-label {
+#parametr #Project_details .form-label {
   font-size: 17px;
 }
-#Project_details .project_details {
+#parametr #Project_details .project_details {
   margin-top: 16px;
   padding-inline: 50px;
 }
-#editPicture {
+#parametr #editPicture {
   height: 30px;
   width: 135px;
   font-size: 15px;
   box-shadow: var(--box_shadow);
 }
-.project_details {
+#parametr .project_details {
   padding: 30px;
 }
-.Project_pic {
+#parametr .Project_pic {
   display: flex;
   justify-content: center;
 }
-.user_picker {
-  border: 1px solid;
+#parametr .user_picker {
+  border: 1px solid rgb(211, 211, 211);
   height: 40px;
   border-radius: 10px;
   background-color: white;
   overflow-y: hidden;
 }
-.user_picker ul {
+#parametr .user_picker ul {
   padding: 4px;
   padding-left: 10px;
   margin-bottom: 0;
 }
-.user_picker li {
+#parametr .user_picker li {
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
 }
-/* .user_picker ul {
+#parametr .user_picking {
+  border: 1px solid;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  overflow-y: hidden;
+}
+#parametr .user_picking ul {
   padding: 4px;
   padding-left: 10px;
   margin-bottom: 0;
 }
-.user_picker li {
+#parametr .user_picking li {
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
-} */
+}
+#parametr .user_detail {
+  padding: 30px;
+}
 /* page backlog */
 #backlog_page {
 }
