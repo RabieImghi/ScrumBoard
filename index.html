@@ -1,240 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="d-flex justify-content-between align-items-center gap-6">
-      <div class="left-header d-flex align-items-center gap-4">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>Document</title>
+</head>
+<body onload="drog_drop_function()">  
+<header class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
+    <div class="left-header d-flex align-items-center gap-4  ">
         <div class="left-header-logo w-25">
-          <img src="images/logo.png" class="w-100" alt="logo" />
+            <img src="images/logo.png" class="w-100" alt="logo">
         </div>
         <nav class="left-header-nav">
-          <ul class="d-flex gap-3 list-unstyled mt-4">
-            <li>
-              <a href="#" class="text-decoration-none text-secondary fw-bold"
-                >Your work</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-decoration-none text-secondary fw-bold"
-                >Project</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-decoration-none text-secondary fw-bold"
-                >filtered</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-decoration-none text-secondary fw-bold"
-                >table board</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-decoration-none text-secondary fw-bold"
-                >team</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-decoration-none text-secondary fw-bold"
-                >Appli</a
-              >
-            </li>
-          </ul>
+            <ul class="d-flex gap-3 list-unstyled mt-4">
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">Your work</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">Project</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">filtered</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">table board</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">team</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">Appli</a></li>
+            </ul>
         </nav>
-      </div>
-
-      <div class="d-flex gap-3">
-        <img
-          height="39px"
-          class="d-none rounded-1 search-mobile"
-          src="images/search.png"
-          alt="search" />
+    </div>
+    
+    <div class="d-flex gap-3">
+        <img height="39px" class="d-none rounded-1 search-mobile" src="images/search.png" alt="search">
         <div class="right-header-search d-flex">
-          <input
-            type="search"
-            class="form-control search_input"
-            style="border-radius: 5px 0 0 5px; outline: none"
-            id="search"
-            placeholder="search" />
-          <img
-            height="39px"
-            style="border-radius: 0 5px 5px 0"
-            src="images/search.png"
-            alt="search" />
+            <input type="search" class="form-control search_input" style="border-radius: 5px 0 0 5px; outline: none;" id="search" placeholder="search">
+            <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
         </div>
         <nav class="right-header-nav d-flex gap-4">
-          <img width="40px" src="images/alarm.png" alt="alarm" />
-          <img
-            width="40px"
-            class="displaynone"
-            src="images/repair.png"
-            alt="setting" />
-          <img
-            width="40px"
-            style="display: block"
-            src="images/user.png"
-            alt="user" />
+            <img width="40px" src="images/alarm.png" alt="alarm">
+            <img width="40px" class="displaynone" src="images/repair.png" alt="setting">
+            <img width="40px" style="display: block;" src="images/user.png" alt="user" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class="dropdown-menu d-none MNMB">
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Profil</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Your work</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Project</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">filtered</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">table board</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">team</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Appli</a></li>
+                <li><hr></li>
+                <li><a href="parametre.html" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 ">
+                    <img src="images/repair.png" width="20px" alt="rapaire"><span class="ml-2">Project Settings</span>
+                </a></li>
+            </ul>
         </nav>
-      </div>
-    </header>
-    <main id="main_container" class="row" style="width: 100%">
-      <section id="header_vertical" class="col-3 pt-4 ml-2">
-        <div
-          class="board_info p-2 rounded-1 border d-flex gap-3 align-items-center">
-          <img src="images/user.png" alt="projet" class="w-25" />
-          <div class="board_desc">
-            <h4 class="fw-bold text-secondary">Scrum Board</h4>
-            <span class="text-secondary">Projet logiciel</span>
-          </div>
+        
+    </div>
+</header>
+<main id="main_container" class="row" style="width: 100%;">
+    <div id="filter" onclick="close_menu()" class="position-absolute w-100 h-100 d-none"></div>
+    <section id="header_vertical" class="col-3 pt-4">
+        <div class="d-flex justify-content-end">
+            <img src="images/ferme.png" class="ferme-d-block" height="50px"  onclick="close_menu()" alt="">
         </div>
-        <h3 class="text-secondary pt-4 text-md fw-bold">PLANIFICATION</h3>
+        <div class="">
+            <div class="board_info p-2 rounded-1 border d-flex gap-3 align-items-center">
+                <img src="images/user.png" alt="projet" width="70px">
+                <div class="board_desc">
+                    <h4 class="fw-bold fs-6 fs-md-4 text-secondary">Scrum Board </h4>
+                    <span class="text-secondary">Projet logiciel</span>
+                </div>
+            </div>
+            
+        </div>
+        <h3 class="text-secondary pt-4 fs-4 fw-bold">PLANIFICATION</h3>
         <nav class="col">
-          <ul class="navigation_pages list-unstyled ml-2">
-            <li class="p-4 border mt-3 rounded-1 active">
-              <a
-                href="#"
-                class="p-4 text-secondary text-decoration-none fw-bold"
-                ><img src="images/board.png" alt="Scrum board" /><span
-                  class="ml-2"
-                  >Scrum Board</span
-                ></a
-              >
-            </li>
-            <li class="p-4 border mt-3 rounded-1">
-              <a
-                href="#"
-                class="p-4 text-secondary text-decoration-none fw-bold"
-                ><img src="images/backlog.png" alt="backlog" /><span
-                  class="ml-2"
-                  >Backlog</span
-                ></a
-              >
-            </li>
-            <li class="p-4 border mt-3 rounded-1">
-              <a
-                href="#"
-                class="p-4 text-secondary text-decoration-none fw-bold"
-                ><img src="images/chronological-line.png" alt="chrono" /><span
-                  class="ml-2"
-                  >Chronologie</span
-                ></a
-              >
-            </li>
-            <li class="p-4 border mt-3 rounded-1">
-              <a
-                href="#"
-                class="p-4 text-secondary text-decoration-none fw-bold"
-                ><img src="images/repair.png" alt="rapaire" /><span class="ml-2"
-                  >Project Settings</span
-                ></a
-              >
-            </li>
-          </ul>
+            <ul class="navigation_pages list-unstyled ml-2 ">
+                <li class="plr-4 border mt-3 rounded-1 active"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></a></li>
+                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></a></li>
+                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></a></li>
+                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></a></li>
+            </ul>
         </nav>
-      </section>
-      <section id="home_page" class="col p-4">
-        <div class="home_content">
-          <span class="text-secondary">Project > Scrum Board</span>
-          <div class="sprint_info row mt-4">
-            <h4 class="col-5 col-md-8 fw-bold text-secondary">Sprint Name</h4>
-            <div class="timer_sprint col text-end">
-              <img src="images/clock.png" style="width: 6%" alt="timer" />
-              <span class="text-secondary">10 days remaining</span>
-              <button
-                class="fw-bold btn ml-2"
-                style="background: var(--btn); color: white">
-                Finish sprint
-              </button>
+    </section>
+    <section id="home_page" class="col p-4">
+        <img src="images/menu2.png" width="50px" class="ferme-d-block" onclick="affiche()" alt="menu">
+        <div class="home_content ">
+            <span class="text-secondary">Project > Scrum Board</span>
+            <div class="sprint_info row mt-4">
+                <h4 class="col-5 col-md-8 fw-bold text-secondary">Sprint Name</h4>
+                <div class="timer_sprint col text-end">
+                    <img src="images/clock.png" style="width: 6%;" alt="timer"> 
+                    <span class="text-secondary">10 days remaining</span>
+                    <button class="fw-bold btn ml-2" style="background: var(--btn); color: white;">Finish sprint</button>
+                </div>
             </div>
-          </div>
-          <div
-            class="users mt-4 d-flex justify-content-between align-items-center flex-wrap">
-            <div
-              class="user_infos d-flex flex-wrap gap-1"
-              style="min-width: 50%">
-              <div class="home-search2 d-flex mt-1">
-                <input
-                  type="search"
-                  class="form-control search_input"
-                  style="border-radius: 5px 0 0 5px; outline: none"
-                  id="search"
-                  placeholder="search" />
-                <img
-                  height="39px"
-                  style="border-radius: 0 5px 5px 0"
-                  src="images/search.png"
-                  alt="search" />
-              </div>
-              <div class="users_team d-flex flex-wrap">
-                <div
-                  class="user_group p-2 ml-2 mt-1 user_active"
-                  style="min-width: 120px; max-width: 120px">
-                  <img src="images/user.png" style="width: 20%" alt="user" />
-                  <span class="text-secondary">user name</span>
+            <div class="users mt-4 d-flex justify-content-between align-items-center flex-wrap">
+                <div class="user_infos d-flex flex-wrap gap-1" style="min-width: 50%;">
+                    <div class="home-search2 d-flex mt-1">
+                        <input type="search" class="form-control search_input" style="border-radius: 5px 0 0 5px; outline: none;" id="search" placeholder="search">
+                        <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
+                    </div>
+                    <div class="users_team d-flex gap-2 flex-wrap">
+                        <div class="user_group p-2 mt-1 user_active" style="min-width: 120px; max-width: 120px; cursor: pointer">
+                            <img src="images/user.png" style="width: 20%;" alt="user">
+                            <span class="text-secondary">user name</span>
+                        </div>
+                        <div class="user_group p-2 mt-1" style="min-width: 120px; max-width: 120px; cursor: pointer">
+                            <img src="images/user.png" style="width: 20%;" alt="user">
+                            <span class="text-secondary">user name</span>
+                        </div>
+                        <div class="user_group p-2 mt-1" style="min-width: 120px; max-width: 120px; cursor: pointer">
+                            <img src="images/user.png" style="width: 20%;" alt="user">
+                            <span class="text-secondary">user name</span>
+                        </div>
+                        <div class="text-center rounded-1 p-2 mt-1" style="min-width: 60px; max-width: 60px; background: var(--btn);">
+                            <img src="images/add-user.png" style="width: 60%;" alt="user">
+                        </div>
+                    </div>
                 </div>
-                <div
-                  class="user_group p-2 ml-2 mt-1"
-                  style="min-width: 120px; max-width: 120px">
-                  <img src="images/user.png" style="width: 20%" alt="user" />
-                  <span class="text-secondary">user name</span>
+                <div class="filtre d-flex flex-wrap gap-3 fw-bold">
+                    <label class="mt-1">
+                        <span class="text-secondary">Group By</span>
+                        <select style="background: var(--active); border: none; outline: none;" class="h-100 fw-bold text-secondary rounded-1">
+                            <option value="Nothing">Nothing  </option>
+                            <option value="To_Do">To Do</option>
+                            <option value="Doing">Doing</option>
+                            <option value="Finish">Finish</option>
+                        </select>
+                    </label>
+                    <div class="user_group p-2 mt-1" style="cursor: pointer">
+                        <span class="text-secondary">user name</span>
+                    </div>
+                    <div class="user_group p-2 mt-1" style="cursor: pointer">
+                        <span class="text-secondary">user name</span>
+                    </div>
                 </div>
-                <div
-                  class="user_group p-2 ml-2 mt-1"
-                  style="min-width: 120px; max-width: 120px">
-                  <img src="images/user.png" style="width: 20%" alt="user" />
-                  <span class="text-secondary">user name</span>
-                </div>
-                <div
-                  class="text-center rounded-1 p-2 ml-2 mt-1"
-                  style="
-                    min-width: 60px;
-                    max-width: 60px;
-                    background: var(--btn);
-                  ">
-                  <img
-                    src="images/add-user.png"
-                    style="width: 60%"
-                    alt="user" />
-                </div>
-              </div>
             </div>
-            <div class="filtre d-flex flex-wrap gap-3 fw-bold">
-              <label class="mt-1">
-                <span class="text-secondary">Group By</span>
-                <select
-                  style="background: var(--active); border: none; outline: none"
-                  class="h-100 fw-bold text-secondary rounded-1">
-                  <option value="Nothing">Nothing</option>
-                  <option value="To_Do">To Do</option>
-                  <option value="Doing">Doing</option>
-                  <option value="Finish">Finish</option>
-                </select>
-              </label>
-              <div class="user_group p-2 mt-1">
-                <span class="text-secondary">user name</span>
-              </div>
-              <div class="user_group p-2 mt-1">
-                <span class="text-secondary">user name</span>
-              </div>
+            <div class="users_story w-100 d-flex flex-wrap justify-content-center">
+                <div id="todo_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
+                    <h3 class="fw-bold text-secondary ">To Do</h3>
+                    <!-- ------------------- -->
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                        <div class="story_info d-flex justify-content-between mt-2" >
+                            <div class="d-flex align-items-end">
+                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
+                                <span class="ml-1 fw-bold text-secondary">KR-01</span>
+                            </div>
+                            <img src="images/user.png" width="30px" draggable="false" alt="user">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered  modal-xl " >
+                            <div class="modal-content" style='background: var(--body);'>
+                            <div class="modal-header">
+                                <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
+                                    Detail epic / 
+                                    <div class="d-flex align-items-end ml-1">
+                                        <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="16px" draggable="false" alt="save">
+                                        <span class="ml-1 ">KR-01</span>
+                                    </div>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-11 col-md-8">
+                                    <span class="text-secondary fs-4">
+                                        - En tant qu'utilisateur, je souhaite pouvoir créer un  Maquette  ++Page 3 : Timer++
+                                    </span>
+                                    <div class="row">
+                                        <span class=" fs-5 text-secondary">Description</span>
+                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <span class=" col-12 fs-5 text-secondary">Activity</span>
+                                        <div class="mt-3 d-flex flex-wrap gap-2">
+                                            <span class=" fs-5 text-secondary">Afficher : </span>
+                                            <span class="btn " style="background:  var(--active);">ALL</span> 
+                                            <span class="btn shadow" style="background:  var(--active);">Commentaires</span> 
+                                            <span class="btn " style="background:  var(--active);">Historique</span>  
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 d-flex gap-2">
+                                        <img src="images/user.png" width="35px" alt="user">
+                                        <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
+                                    </div>
+                                    <div class="mt-3 text-end">
+                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                    </div>
+                                </div>
+                                <div class="col p-3">
+                                    <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
+                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                            <option value="todo">To do</option>
+                                            <option value="todo">To do to do</option>
+                                            <option value="todo">To do</option>
+                                        </select>
+                                        <hr>
+                                        <span class="mt-3 plr-4 fw-bold">Details</span>
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Responsable</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Labels</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Sprint</span>
+                                            <span>Creation Maquete</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Story point estimate</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Rapporteur</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------- -->
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal2" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                        <div class="story_info d-flex justify-content-between mt-2" >
+                            <div class="d-flex align-items-end">
+                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
+                                <span class="ml-1 fw-bold text-secondary">KR-02</span>
+                            </div>
+                            <img src="images/user.png" width="30px" draggable="false" alt="user">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered  modal-xl " >
+                            <div class="modal-content" style='background: var(--body);'>
+                            <div class="modal-header">
+                                <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
+                                    Detail epic / 
+                                    <div class="d-flex align-items-end ml-1">
+                                        <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="16px" draggable="false" alt="save">
+                                        <span class="ml-1 ">KR-02</span>
+                                    </div>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-8">
+                                    <span class="text-secondary fs-4">
+                                        - En tant qu'utilisateur, je souhaite pouvoir créer un  Maquette  ++Page 3 : Timer++
+                                    </span>
+                                    <div class="row">
+                                        <span class=" fs-5 text-secondary">Description</span>
+                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <span class=" col-12 fs-5 text-secondary">Activity</span>
+                                        <div class="mt-3">
+                                            <span class=" col-12 fs-5 text-secondary">Afficher : </span>
+                                            <button class="btn ml-1 " style="background:  var(--active);">ALL</button> 
+                                            <button class="btn ml-1 shadow" style="background:  var(--active);">Commentaires</button> 
+                                            <button class="btn ml-1 " style="background:  var(--active);">Historique</button>  
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 d-flex gap-2">
+                                        <img src="images/user.png" width="35px" alt="user">
+                                        <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
+                                    </div>
+                                    <div class="mt-3 text-end">
+                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                    </div>
+                                </div>
+                                <div class="col p-3">
+                                    <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
+                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                            <option value="todo">To do</option>
+                                            <option value="todo">To do to do</option>
+                                            <option value="todo">To do</option>
+                                        </select>
+                                        <hr>
+                                        <span class="mt-3 plr-4 fw-bold">Details</span>
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Responsable</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Labels</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Sprint</span>
+                                            <span>Creation Maquete</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Story point estimate</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Rapporteur</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------- -->
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal3" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                        <div class="story_info d-flex justify-content-between mt-2" >
+                            <div class="d-flex align-items-end">
+                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
+                                <span class="ml-1 fw-bold text-secondary">KR-03</span>
+                            </div>
+                            <img src="images/user.png" width="30px" draggable="false" alt="user">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered  modal-xl " >
+                            <div class="modal-content" style='background: var(--body);'>
+                            <div class="modal-header">
+                                <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
+                                    Detail epic / 
+                                    <div class="d-flex align-items-end ml-1">
+                                        <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="16px" draggable="false" alt="save">
+                                        <span class="ml-1 ">KR-03</span>
+                                    </div>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-8">
+                                    <span class="text-secondary fs-4">
+                                        - En tant qu'utilisateur, je souhaite pouvoir créer un  Maquette  ++Page 3 : Timer++
+                                    </span>
+                                    <div class="row">
+                                        <span class=" fs-5 text-secondary">Description</span>
+                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <span class=" col-12 fs-5 text-secondary">Activity</span>
+                                        <div class="mt-3">
+                                            <span class=" col-12 fs-5 text-secondary">Afficher : </span>
+                                            <button class="btn ml-1 " style="background:  var(--active);">ALL</button> 
+                                            <button class="btn ml-1 shadow" style="background:  var(--active);">Commentaires</button> 
+                                            <button class="btn ml-1 " style="background:  var(--active);">Historique</button>  
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 d-flex gap-2">
+                                        <img src="images/user.png" width="35px" alt="user">
+                                        <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
+                                    </div>
+                                    <div class="mt-3 text-end">
+                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                    </div>
+                                </div>
+                                <div class="col p-3">
+                                    <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
+                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                            <option value="todo">To do</option>
+                                            <option value="todo">To do to do</option>
+                                            <option value="todo">To do</option>
+                                        </select>
+                                        <hr>
+                                        <span class="mt-3 plr-4 fw-bold">Details</span>
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Responsable</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Labels</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Sprint</span>
+                                            <span>Creation Maquete</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Story point estimate</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Rapporteur</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------- -->
+                </div>
+                <div id="doing_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
+                    <h3 class="fw-bold text-secondary ">Doing</h3>
+                    <!-- ------------------- -->
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal4" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                        <div class="story_info d-flex justify-content-between mt-2" >
+                            <div class="d-flex align-items-end">
+                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
+                                <span class="ml-1 fw-bold text-secondary">KR-04</span>
+                            </div>
+                            <img src="images/user.png" width="30px" draggable="false" alt="user">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered  modal-xl " >
+                            <div class="modal-content" style='background: var(--body);'>
+                            <div class="modal-header">
+                                <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
+                                    Detail epic / 
+                                    <div class="d-flex align-items-end ml-1">
+                                        <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="16px" draggable="false" alt="save">
+                                        <span class="ml-1 ">KR-04</span>
+                                    </div>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-8">
+                                    <span class="text-secondary fs-4">
+                                        - En tant qu'utilisateur, je souhaite pouvoir créer un  Maquette  ++Page 3 : Timer++
+                                    </span>
+                                    <div class="row">
+                                        <span class=" fs-5 text-secondary">Description</span>
+                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <span class=" col-12 fs-5 text-secondary">Activity</span>
+                                        <div class="mt-3">
+                                            <span class=" col-12 fs-5 text-secondary">Afficher : </span>
+                                            <button class="btn ml-1 " style="background:  var(--active);">ALL</button> 
+                                            <button class="btn ml-1 shadow" style="background:  var(--active);">Commentaires</button> 
+                                            <button class="btn ml-1 " style="background:  var(--active);">Historique</button>  
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 d-flex gap-2">
+                                        <img src="images/user.png" width="35px" alt="user">
+                                        <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
+                                    </div>
+                                    <div class="mt-3 text-end">
+                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                    </div>
+                                </div>
+                                <div class="col p-3">
+                                    <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
+                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                            <option value="todo">To do</option>
+                                            <option value="todo" selected>Doing</option>
+                                            <option value="todo" >finished</option>
+                                        </select>
+                                        <hr>
+                                        <span class="mt-3 plr-4 fw-bold">Details</span>
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Responsable</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Labels</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Sprint</span>
+                                            <span>Creation Maquete</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Story point estimate</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Rapporteur</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------- -->
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal5" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                        <div class="story_info d-flex justify-content-between mt-2" >
+                            <div class="d-flex align-items-end">
+                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
+                                <span class="ml-1 fw-bold text-secondary">KR-05</span>
+                            </div>
+                            <img src="images/user.png" width="30px" draggable="false" alt="user">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered  modal-xl " >
+                            <div class="modal-content" style='background: var(--body);'>
+                            <div class="modal-header">
+                                <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
+                                    Detail epic / 
+                                    <div class="d-flex align-items-end ml-1">
+                                        <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="16px" draggable="false" alt="save">
+                                        <span class="ml-1 ">KR-05</span>
+                                    </div>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-8">
+                                    <span class="text-secondary fs-4">
+                                        - En tant qu'utilisateur, je souhaite pouvoir créer un  Maquette  ++Page 3 : Timer++
+                                    </span>
+                                    <div class="row">
+                                        <span class=" fs-5 text-secondary">Description</span>
+                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <span class=" col-12 fs-5 text-secondary">Activity</span>
+                                        <div class="mt-3">
+                                            <span class=" col-12 fs-5 text-secondary">Afficher : </span>
+                                            <button class="btn ml-1 " style="background:  var(--active);">ALL</button> 
+                                            <button class="btn ml-1 shadow" style="background:  var(--active);">Commentaires</button> 
+                                            <button class="btn ml-1 " style="background:  var(--active);">Historique</button>  
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 d-flex gap-2">
+                                        <img src="images/user.png" width="35px" alt="user">
+                                        <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
+                                    </div>
+                                    <div class="mt-3 text-end">
+                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                    </div>
+                                </div>
+                                <div class="col p-3">
+                                    <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
+                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                            <option value="todo">To do</option>
+                                            <option value="todo" selected>Doing</option>
+                                            <option value="todo" >finished</option>
+                                        </select>
+                                        <hr>
+                                        <span class="mt-3 plr-4 fw-bold">Details</span>
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Responsable</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Labels</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Sprint</span>
+                                            <span>Creation Maquete</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Story point estimate</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Rapporteur</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------- -->
+
+                </div>
+                <div id="finish_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
+                    <h3 class="fw-bold text-secondary ">Finiched</h3>
+                    <!-- ------------------- -->
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal6" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                        <div class="story_info d-flex justify-content-between mt-2" >
+                            <div class="d-flex align-items-end">
+                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
+                                <span class="ml-1 fw-bold text-secondary">KR-06</span>
+                            </div>
+                            <img src="images/user.png" width="30px" draggable="false" alt="user">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered  modal-xl " >
+                            <div class="modal-content" style='background: var(--body);'>
+                            <div class="modal-header">
+                                <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
+                                    Detail epic / 
+                                    <div class="d-flex align-items-end ml-1">
+                                        <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="16px" draggable="false" alt="save">
+                                        <span class="ml-1 ">KR-06</span>
+                                    </div>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-8">
+                                    <span class="text-secondary fs-4">
+                                        - En tant qu'utilisateur, je souhaite pouvoir créer un  Maquette  ++Page 3 : Timer++
+                                    </span>
+                                    <div class="row">
+                                        <span class=" fs-5 text-secondary">Description</span>
+                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <span class=" col-12 fs-5 text-secondary">Activity</span>
+                                        <div class="mt-3">
+                                            <span class=" col-12 fs-5 text-secondary">Afficher : </span>
+                                            <button class="btn ml-1 " style="background:  var(--active);">ALL</button> 
+                                            <button class="btn ml-1 shadow" style="background:  var(--active);">Commentaires</button> 
+                                            <button class="btn ml-1 " style="background:  var(--active);">Historique</button>  
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 d-flex gap-2">
+                                        <img src="images/user.png" width="35px" alt="user">
+                                        <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
+                                    </div>
+                                    <div class="mt-3 text-end">
+                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                    </div>
+                                </div>
+                                <div class="col p-3">
+                                    <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
+                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                            <option value="todo">To do</option>
+                                            <option value="todo" >Doing</option>
+                                            <option value="todo" selected >finished</option>
+                                        </select>
+                                        <hr>
+                                        <span class="mt-3 plr-4 fw-bold">Details</span>
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Responsable</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Labels</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Sprint</span>
+                                            <span>Creation Maquete</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Story point estimate</span>
+                                            <span>None</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3 plr-4">
+                                            <span class="fw-bold">Rapporteur</span>
+                                            <span>Rabia Ait Imghi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------- -->
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-    </main>
-    <script src="script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
-  </body>
+    </section>
+</main>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
 </html>

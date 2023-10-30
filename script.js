@@ -98,6 +98,12 @@ function close_menu() {
   filter.classList.add("d-none");
   menu_vertical.classList.remove("header_vertical_mobile");
 }
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
 
 //****page parametre
 const editPictureButton = document.getElementById("editPicture");
@@ -118,7 +124,6 @@ user_pick.addEventListener("click", () => {
     user_pick.classList.add("user_picker");
   }
 });
-
 function reSort(element) {
   user_elements.forEach((userElement, index) => {
     userElement.removeAttribute("class");
