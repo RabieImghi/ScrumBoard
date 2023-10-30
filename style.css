@@ -70,6 +70,16 @@ header {
 .ferme-d-block{
     display: none;
 }
+/* .user_group {
+  background: var(--active);
+}
+.user_active,
+.user_group:hover {
+  box-shadow: var(--box_shadow);
+}
+.ferme-d-block{
+    display: none;
+} */
 
 
 @media screen and (max-width : 1080px) {
