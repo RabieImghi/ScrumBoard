@@ -60,27 +60,11 @@
           <label for="exampleFormControlInput1" class="form-label"
             >Project Manager</label
           ><br />
-          <!-- <select name="image-select">
-            <option value="option1">
-              <div>
-                <p>ali</p>
-                <img
-                  src="images/user.png"
-                  alt="Image_1"
-                  style="width: 10px; height: 10px" />
-              </div>
-            </option>
-            <option value="image2.png">
-              <img src="image2.png" alt="Image 2" />
-            </option>
-            <option value="image3.png">
-              <img src="image3.png" alt="Image 3" />
-            </option>
-          </select> -->
-          <div class="user_picker">
+          <div class="user_picker" id="user_pick">
             <ul>
-              <li>
-                <div id="user0">
+              <li onclick="reSort(this)" id="default" class="d-none"></li>
+              <li onclick="reSort(this)">
+                <div class="user" id="user0">
                   <img
                     src="images/user.png"
                     alt="Image_1"
@@ -88,31 +72,31 @@
                   <span>Rabie Ait Mghir</span>
                 </div>
               </li>
-              <li>
-                <div id="user1">
+              <li onclick="reSort(this)">
+                <div class="user" id="user1">
                   <img
                     src="images/user.png"
                     alt="Image_1"
                     style="height: 30px" />
-                  <span>Rabie Ait Mghir</span>
+                  <span>abdeljalil el filaly</span>
                 </div>
               </li>
-              <li>
-                <div id="user2">
+              <li onclick="reSort(this)">
+                <div class="user" id="user2">
                   <img
                     src="images/user.png"
                     alt="Image_1"
                     style="height: 30px" />
-                  <span>Rabie Ait Mghir</span>
+                  <span>khalid hiddou</span>
                 </div>
               </li>
-              <li>
-                <div id="user3">
+              <li onclick="reSort(this)">
+                <div class="user" id="user3">
                   <img
                     src="images/user.png"
                     alt="Image_1"
                     style="height: 30px" />
-                  <span>Rabie Ait Mghir</span>
+                  <span>oumaima</span>
                 </div>
               </li>
             </ul>
