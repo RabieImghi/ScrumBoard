@@ -227,95 +227,121 @@
           <button id="Project_details">Project details</button>
           <button id="User_details">User details</button>
         </div>
-        <div class="project_details" style="border: 1px solid">
-          <div class="Project_pic">
-            <img
-              src="images/repair.png"
-              alt="repair"
-              id=""
-              style="width: 100px; margin-bottom: 1rem !important" /><br />
-          </div>
-          <button type="button" id="editPicture" style="font-weight: bold">
-            Edit Picture
-          </button>
-          <input
-            type="file"
-            id="hiddenFileInput"
-            style="display: none"
-            accept=".jpg, .png" />
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Name</label
-            ><br />
+        <div class="details_body">
+          <div class="project_details">
+            <div class="Project_pic">
+              <img
+                src="images/repair.png"
+                alt="repair"
+                id="prj_pic "
+                style="width: 100px; margin-bottom: 1rem !important" /><br />
+            </div>
+            <button type="button" id="editPicture" style="font-weight: bold">
+              Edit Picture
+            </button>
             <input
-              type="email"
-              class="h-25 form-control"
-              id="exampleFormControlInput1"
-              placeholder="Project Name" />
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Description</label
-            ><br />
-            <input
-              type="email"
-              class="h-25 form-control"
-              id="exampleFormControlInput1"
-              placeholder="Description" />
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Project Manager</label
-            ><br />
-            <div class="user_picker" id="user_pick">
-              <ul>
-                <li onclick="reSort(this)" id="default" class="d-none"></li>
-                <li onclick="reSort(this)">
-                  <div class="user" id="user0">
-                    <img
-                      src="images/user.png"
-                      alt="Image_1"
-                      style="height: 30px" />
-                    <span>Rabie Ait Mghir</span>
-                  </div>
-                </li>
-                <li onclick="reSort(this)">
-                  <div class="user" id="user1">
-                    <img
-                      src="images/user.png"
-                      alt="Image_1"
-                      style="height: 30px" />
-                    <span>abdeljalil el filaly</span>
-                  </div>
-                </li>
-                <li onclick="reSort(this)">
-                  <div class="user" id="user2">
-                    <img
-                      src="images/user.png"
-                      alt="Image_1"
-                      style="height: 30px" />
-                    <span>khalid hiddou</span>
-                  </div>
-                </li>
-                <li onclick="reSort(this)">
-                  <div class="user" id="user3">
-                    <img
-                      src="images/user.png"
-                      alt="Image_1"
-                      style="height: 30px" />
-                    <span>oumaima</span>
-                  </div>
-                </li>
-              </ul>
+              type="file"
+              id="hiddenFileInput"
+              style="display: none"
+              accept=".jpg, .png, .jpeg" />
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Name</label
+              ><br />
+              <input
+                type="email"
+                class="h-25 form-control"
+                id="exampleFormControlInput1"
+                placeholder="Project Name" />
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
-                >Responsable par défaut </label
+                >Description</label
               ><br />
               <input
                 type="email"
                 class="h-25 form-control"
                 id="exampleFormControlInput1"
                 placeholder="Description" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Project Manager</label
+              ><br />
+              <div class="user_picker" id="user_pick">
+                <ul>
+                  <li onclick="reSort(this)" id="default" class="d-none"></li>
+                  <li onclick="reSort(this)">
+                    <div class="user" id="user0">
+                      <img
+                        src="images/user.png"
+                        alt="Image_1"
+                        style="height: 30px" />
+                      <span>Rabie Ait Mghir</span>
+                    </div>
+                  </li>
+                  <li onclick="reSort(this)">
+                    <div class="user" id="user1">
+                      <img
+                        src="images/user.png"
+                        alt="Image_1"
+                        style="height: 30px" />
+                      <span>abdeljalil el filaly</span>
+                    </div>
+                  </li>
+                  <li onclick="reSort(this)">
+                    <div class="user" id="user2">
+                      <img
+                        src="images/user.png"
+                        alt="Image_1"
+                        style="height: 30px" />
+                      <span>khalid hiddou</span>
+                    </div>
+                  </li>
+                  <li onclick="reSort(this)">
+                    <div class="user" id="user3">
+                      <img
+                        src="images/user.png"
+                        alt="Image_1"
+                        style="height: 30px" />
+                      <span>oumaima</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Responsable par défaut </label
+                ><br />
+                <input
+                  type="email"
+                  class="h-25 form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Description" />
+              </div>
+            </div>
+          </div>
+          <div class="user_detail">
+            <div class="user_search">
+              <span><b>User</b></span>
+              <div class="right-header-search d-flex">
+                <input
+                  type="search"
+                  class="form-control search_input"
+                  style="border-radius: 5px 0 0 5px"
+                  id="search"
+                  placeholder="search" />
+                <img
+                  height="39px"
+                  style="border-radius: 0 5px 5px 0"
+                  src="images/search.png"
+                  alt="search" />
+              </div>
+              <!-- <div class="row">
+                <div class="col">
+                  
+                </div>
+              </div> -->
             </div>
           </div>
         </div>

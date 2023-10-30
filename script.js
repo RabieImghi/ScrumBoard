@@ -58,7 +58,7 @@ function close_menu() {
 var myModal = document.getElementById("myModal");
 var myInput = document.getElementById("myInput");
 
-myModal.addEventListener("shown.bs.modal", function () {
+myModal?.addEventListener("shown.bs.modal", function () {
   myInput.focus();
 });
 
@@ -69,18 +69,17 @@ const user_pick = document.getElementById("user_pick");
 const user = document.getElementsByClassName("user");
 const user_elements = user_pick.querySelectorAll("li");
 const user_default = user_pick.querySelector("#default");
+const prj_pic = document.querySelector("#prj_pic");
 
-btn_edit_img.addEventListener("click", () => {
-  hidden_file.click();
-});
-
-//****page parametre
-const editPictureButton = document.getElementById("editPicture");
-const hiddenFileInput = document.getElementById("hiddenFileInput");
-const allUsers = document.getElementsByClassName("user_picker");
-
-editPictureButton.addEventListener("click", () => {
-  hiddenFileInput.click();
+document.addEventListener("DOMContentLoaded", () => {
+  btn_edit_img?.addEventListener("click", () => {
+    hidden_file.click();
+  });
+  hidden_file?.addEventListener("change", (event) => {
+    console.log(prj_pic.src);
+    prj_pic.src = URL.createObjectURL(event.target.files[0]);
+    console.log(prj_pic.src);
+  });
 });
 
 user_pick.addEventListener("click", () => {
