@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>Document</title>
 </head>
-<body>
+<body onload="drog_drop_function()">  
+<header class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
+    <div class="left-header d-flex align-items-center gap-4  ">
+        <div class="left-header-logo w-25">
+            <img src="images/logo.png" class="w-100" alt="logo">
+        </div>
+        <nav class="left-header-nav">
+            <ul class="d-flex gap-3 list-unstyled mt-4">
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">Your work</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">Project</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">filtered</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">table board</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">team</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary fw-bold">Appli</a></li>
+            </ul>
+        </nav>
+    </div>
     
+    <div class="d-flex gap-3">
+        <img height="39px" class="d-none rounded-1 search-mobile" src="images/search.png" alt="search">
+        <div class="right-header-search d-flex">
+            <input type="search" class="form-control search_input" style="border-radius: 5px 0 0 5px; outline: none;" id="search" placeholder="search">
+            <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
+        </div>
+        <nav class="right-header-nav d-flex gap-4">
+            <img width="40px" src="images/alarm.png" alt="alarm">
+            <img width="40px" class="displaynone" src="images/repair.png" alt="setting">
+            <img width="40px" style="display: block;" src="images/user.png" alt="user" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class="dropdown-menu d-none MNMB">
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Profil</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Your work</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Project</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">filtered</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">table board</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">team</a></li>
+                <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Appli</a></li>
+                <li><hr></li>
+                <li><a href="parametre.html" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 ">
+                    <img src="images/repair.png" width="20px" alt="rapaire"><span class="ml-2">Project Settings</span>
+                </a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+<main id="main_container" class="row" style="width: 100%;">
+    <div id="filter" onclick="close_menu()" class="position-absolute w-100 h-100 d-none"></div>
+    <section id="header_vertical" class="col-3 pt-4">
+        <div class="d-flex justify-content-end">
+            <img src="images/ferme.png" class="ferme-d-block" height="50px"  onclick="close_menu()" alt="">
+        </div>
+        <div class="">
+            <div class="board_info p-2 rounded-1 border d-flex gap-3 align-items-center">
+                <img src="images/user.png" alt="projet" width="70px">
+                <div class="board_desc">
+                    <h4 class="fw-bold fs-6 fs-md-4 text-secondary">Scrum Board </h4>
+                    <span class="text-secondary">Projet logiciel</span>
+                </div>
+            </div>
+            
+        </div>
+        <h3 class="text-secondary pt-4 fs-4 fw-bold">PLANIFICATION</h3>
+        <nav class="col">
+            <ul class="navigation_pages list-unstyled ml-2 ">
+                <li class="plr-4 border mt-3 rounded-1 active"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></a></li>
+                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></a></li>
+                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></a></li>
+                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></a></li>
+            </ul>
+        </nav>
+    </section>
+    <section id="chronolog_page" class="col p-4">
+
+    </section>
+</main>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
