@@ -43,18 +43,6 @@ function close_menu() {
   filter.classList.add("d-none");
   menu_vertical.classList.remove("header_vertical_mobile");
 }
-function affiche() {
-  var menu_vertical = document.getElementById("header_vertical");
-  var filter = document.getElementById("filter");
-  filter.classList.remove("d-none");
-  menu_vertical.classList.add("header_vertical_mobile");
-}
-function close_menu() {
-  var menu_vertical = document.getElementById("header_vertical");
-  var filter = document.getElementById("filter");
-  filter.classList.add("d-none");
-  menu_vertical.classList.remove("header_vertical_mobile");
-}
 var myModal = document.getElementById("myModal");
 var myInput = document.getElementById("myInput");
 
