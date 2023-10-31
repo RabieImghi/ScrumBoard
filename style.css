@@ -249,6 +249,17 @@ button {
 #parametr .user_detail {
   padding: 30px;
 }
+#parametr .user_detail span {
+  font-weight: bold;
+}
+#parametr .user_detail p {
+  display: inline-block;
+}
+#parametr .user_detail i {
+  font-size: 30px;
+  text-align: center;
+}
+
 /* page backlog */
 #backlog_page {
 }
