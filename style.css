@@ -179,16 +179,7 @@ button {
   display: flex;
   gap: 13px;
 }
-#parametr #Project_details,
-#User_details {
-  background-color: var(--heade-nav);
-  border-radius: 5px;
-  height: 30px;
-  width: 135px;
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 20px;
-}
+
 #parametr #Project_details {
   box-shadow: var(--box_shadow);
 }
@@ -228,6 +219,7 @@ button {
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 #parametr .user_picking {
   border: 1px solid;
@@ -245,7 +237,9 @@ button {
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
+  cursor: pointer;
 }
+
 #parametr .user_detail {
   padding: 30px;
 }
@@ -263,22 +257,18 @@ button {
 /* page backlog */
 #backlog_page .input {
   width: 10%;
-
 }
 #backlog_page .form-select {
-  background-color:#FFFFD9;
-
+  background-color: #ffffd9;
 }
 
-#backlog_page .container-fluid img{
+#backlog_page .container-fluid img {
   width: 7%;
 }
-.width-img img{
+.width-img img {
   width: 5%;
 }
-#select-modal{
+#select-modal {
   width: 20%;
-  background-color: #08DC40;
+  background-color: #08dc40;
 }
-
-

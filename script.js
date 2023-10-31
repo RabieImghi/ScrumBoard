@@ -70,6 +70,8 @@ const user = document.getElementsByClassName("user");
 const user_elements = user_pick.querySelectorAll("li");
 const user_default = user_pick.querySelector("#default");
 const prj_pic = document.querySelector("#prj_pic");
+const line = document.getElementsByClassName("list");
+const trash = document.getElementById("trash");
 
 document.addEventListener("DOMContentLoaded", () => {
   btn_edit_img?.addEventListener("click", () => {
@@ -100,3 +102,9 @@ function reSort(element) {
   element.setAttribute("class", "d-none");
   user_default.innerHTML = element.innerHTML;
 }
+
+trash.addEventListener("click", function () {
+  const parent = this.closest("tr");
+  console.log(parent.className);
+  parent.parentNode.removeChild(parent);
+});
