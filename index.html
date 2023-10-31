@@ -33,7 +33,7 @@
         </div>
         <nav class="right-header-nav d-flex gap-4">
             <img width="40px" src="images/alarm.png" alt="alarm">
-            <img width="40px" class="displaynone" src="images/repair.png" alt="setting">
+            <a href="parametre.html"><img width="40px" class="displaynone" src="images/repair.png" alt="setting"></a>
             <img width="40px" style="display: block;" src="images/user.png" alt="user" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu d-none MNMB">
                 <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Profil</a></li>
@@ -71,10 +71,10 @@
         <h3 class="text-secondary pt-4 fs-4 fw-bold">PLANIFICATION</h3>
         <nav class="col">
             <ul class="navigation_pages list-unstyled ml-2 ">
-                <li class="plr-4 border mt-3 rounded-1 active"><a href="index.html" class="text-secondary text-decoration-none fw-bold"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="backlog.html" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="chrologe.html" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="parametre.html" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></a></li>
+                <a href="index.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1 active"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></li></a>
+                <a href="backlog.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></li></a>
+                <a href="chrologe.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></li></a>
+                <a href="parametre.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></li></a>
             </ul>
         </nav>
     </section>
@@ -125,19 +125,19 @@
                         </select>
                     </label>
                     <div class="user_group p-2 mt-1" style="cursor: pointer">
-                        <span class="text-secondary">user name</span>
+                        <span class="text-secondary">Analyse</span>
                     </div>
                     <div class="user_group p-2 mt-1" style="cursor: pointer">
-                        <span class="text-secondary">user name</span>
+                        <span class="text-secondary">Display Setting</span>
                     </div>
                 </div>
             </div>
-            <div class="users_story w-100 d-flex flex-wrap justify-content-center">
+            <div class="users_story w-100 d-flex flex-wrap boxs_mobil justify-content-around">
                 <div id="todo_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary ">To Do</h3>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
-                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                        <span id="text1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                         <div class="story_info d-flex justify-content-between mt-2" >
                             <div class="d-flex align-items-end">
                                 <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
@@ -146,7 +146,7 @@
                             <img src="images/user.png" width="30px" draggable="false" alt="user">
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="user_story_home_page" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">
@@ -166,7 +166,7 @@
                                     </span>
                                     <div class="row">
                                         <span class=" fs-5 text-secondary">Description</span>
-                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                        <textarea id="desc" class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
                                     </div>
                                     <div class="row mt-3">
                                         <span class=" col-12 fs-5 text-secondary">Activity</span>
@@ -182,7 +182,7 @@
                                         <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
                                     </div>
                                     <div class="mt-3 text-end">
-                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                        <button class="btn" onclick="test()" style="background: var(--btn); color: white;">Add Commant</button>
                                     </div>
                                 </div>
                                 <div class="col p-3">
@@ -221,8 +221,15 @@
                             </div>
                         </div>
                     </div>
+                    <script>
+                        function test(){
+                            var tetx1 = document.getElementById('text1');
+                            var dec = document.getElementById('desc');
+                            tetx1.innerHTML=dec.value;
+                        }
+                    </script>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal2" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page2" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
                         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                         <div class="story_info d-flex justify-content-between mt-2" >
                             <div class="d-flex align-items-end">
@@ -232,7 +239,7 @@
                             <img src="images/user.png" width="30px" draggable="false" alt="user">
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="user_story_home_page2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">
@@ -308,7 +315,7 @@
                         </div>
                     </div>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal3" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page3" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
                         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                         <div class="story_info d-flex justify-content-between mt-2" >
                             <div class="d-flex align-items-end">
@@ -318,7 +325,7 @@
                             <img src="images/user.png" width="30px" draggable="false" alt="user">
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="user_story_home_page3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">
@@ -398,7 +405,7 @@
                 <div id="doing_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary ">Doing</h3>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal4" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page4" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
                         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                         <div class="story_info d-flex justify-content-between mt-2" >
                             <div class="d-flex align-items-end">
@@ -408,7 +415,7 @@
                             <img src="images/user.png" width="30px" draggable="false" alt="user">
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="user_story_home_page4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">
@@ -484,7 +491,7 @@
                         </div>
                     </div>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal5" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page5" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
                         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                         <div class="story_info d-flex justify-content-between mt-2" >
                             <div class="d-flex align-items-end">
@@ -494,7 +501,7 @@
                             <img src="images/user.png" width="30px" draggable="false" alt="user">
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="user_story_home_page5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">
@@ -575,7 +582,7 @@
                 <div id="finish_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary ">Finiched</h3>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal6" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page6" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
                         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                         <div class="story_info d-flex justify-content-between mt-2" >
                             <div class="d-flex align-items-end">
@@ -585,7 +592,7 @@
                             <img src="images/user.png" width="30px" draggable="false" alt="user">
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="user_story_home_page6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">

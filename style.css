@@ -70,17 +70,6 @@ header {
 .ferme-d-block {
   display: none;
 }
-/* .user_group {
-  background: var(--active);
-}
-.user_active,
-.user_group:hover {
-  box-shadow: var(--box_shadow);
-}
-.ferme-d-block{
-    display: none;
-} */
-
 @media screen and (max-width: 1080px) {
   .navigation_pages img {
     width: 5%;
@@ -121,6 +110,9 @@ header {
     width: 80%;
   }
   @media screen and (max-width: 790px) {
+    .boxs_mobil.justify-content-around {
+      justify-content: center !important;
+    }
     .d-flex .right-header-search {
       display: none !important;
     }
