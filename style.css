@@ -261,5 +261,24 @@ button {
 }
 
 /* page backlog */
-#backlog_page {
+#backlog_page .input {
+  width: 10%;
+
 }
+#backlog_page .form-select {
+  background-color:#FFFFD9;
+
+}
+
+#backlog_page .container-fluid img{
+  width: 7%;
+}
+.width-img img{
+  width: 5%;
+}
+#select-modal{
+  width: 20%;
+  background-color: #08DC40;
+}
+
+
