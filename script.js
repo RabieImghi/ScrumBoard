@@ -100,4 +100,3 @@ function drog_drop_function() {
     element.setAttribute("class", "d-none");
     user_default.innerHTML = element.innerHTML;
   }
-  
