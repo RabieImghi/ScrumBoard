@@ -55,10 +55,10 @@ const btn_edit_img = document.getElementById("editPicture");
 const hidden_file = document.getElementById("hiddenFileInput");
 const user_pick = document.getElementById("user_pick");
 const user = document.getElementsByClassName("user");
-const user_elements = user_pick.querySelectorAll("li");
-const user_default = user_pick.querySelector("#default");
+const user_elements = user_pick?.querySelectorAll("li");
+const user_default = user_pick?.querySelector("#default");
 const prj_pic = document.querySelector("#prj_pic");
-const line = document.getElementsByClassName("list");
+const line = document.getElementById("line");
 const trash = document.getElementById("trash");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-user_pick.addEventListener("click", () => {
+user_pick?.addEventListener("click", () => {
   let getS = user_pick.className;
   if (getS === "user_picker") {
     user_pick.classList.add("user_picking");
@@ -90,9 +90,29 @@ function reSort(element) {
   element.setAttribute("class", "d-none");
   user_default.innerHTML = element.innerHTML;
 }
-
-trash.addEventListener("click", function () {
-  const parent = this.closest("tr");
-  console.log(parent.className);
-  parent.parentNode.removeChild(parent);
+const elements = document.querySelectorAll("*");
+function gen(element, eltoadd) {
+  let i = 0;
+  elements.forEach((element) => {
+    if (element.id === eltoadd) {
+      i++;
+      element.id = eltoadd + i;
+      console.log(element);
+    }
+  });
+}
+const P = line?.closest("tr");
+const L = trash?.closest("tr");
+document.addEventListener("DOMContentLoaded", () => {
+  gen(L, "line");
+  gen(P, "trash");
 });
+let Ln = document.querySelectorAll("#line");
+let Tr = document.querySelectorAll("#trash");
+for (let i = 0; i < Ln.length; i++) {
+  console.log(Ln[i]);
+  console.log(Tr[i]);
+  Tr[i].addEventListener("click", () => {
+    Ln[i].remove();
+  });
+}
