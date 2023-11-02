@@ -136,9 +136,9 @@
                 <div id="todo_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary ">To Do</h3>
                     <!-- ------------------- -->
-                    <div id="user_story1" class="all_user_story" >
-                        <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
-                            <span id="text1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                    <div id="user_story1"class="all_user_story">
+                        <div class="story p-2 rounded-1 mt-3"  data-bs-toggle="modal" data-bs-target="#user_story_home_page" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                            <span id="text1" onclick="afiche_detail_user(1)" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                             <div class="story_info d-flex justify-content-between mt-2" >
                                 <div class="d-flex align-items-end">
                                     <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
@@ -146,6 +146,7 @@
                                 </div>
                                 <img src="images/user.png" width="30px" draggable="false" alt="user">
                             </div>
+                            <input type="hidden" id="description_user1" value="Add description ...">
                         </div>
                         <div class="modal fade" id="user_story_home_page" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered  modal-xl " >
@@ -167,7 +168,7 @@
                                         </span>
                                         <div class="row">
                                             <span class=" fs-5 text-secondary">Description</span>
-                                            <textarea id="desc" class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                            <textarea id="desc1" class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
                                         </div>
                                         <div class="row mt-3">
                                             <span class=" col-12 fs-5 text-secondary">Activity</span>
@@ -234,6 +235,7 @@
                                 </div>
                                 <img src="images/user.png" width="30px" draggable="false" alt="user">
                             </div>
+                            <input type="hidden" id="description_user2" value="Add description ...">
                         </div>
                         <div class="modal fade" id="user_story_home_page2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered  modal-xl " >
@@ -255,7 +257,7 @@
                                         </span>
                                         <div class="row">
                                             <span class=" fs-5 text-secondary">Description</span>
-                                            <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                            <textarea id="desc2" class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
                                         </div>
                                         <div class="row mt-3">
                                             <span class=" col-12 fs-5 text-secondary">Activity</span>
@@ -322,6 +324,7 @@
                                 </div>
                                 <img src="images/user.png" width="30px" draggable="false" alt="user">
                             </div>
+                            <input type="hidden" id="description_user3" value="Add description ...">
                         </div>
                         <div class="modal fade" id="user_story_home_page3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered  modal-xl " >
@@ -343,7 +346,7 @@
                                         </span>
                                         <div class="row">
                                             <span class=" fs-5 text-secondary">Description</span>
-                                            <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                            <textarea id="desc3" class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
                                         </div>
                                         <div class="row mt-3">
                                             <span class=" col-12 fs-5 text-secondary">Activity</span>
@@ -404,17 +407,19 @@
                 <div id="doing_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary ">Doing</h3>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page4" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
-                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
-                        <div class="story_info d-flex justify-content-between mt-2" >
-                            <div class="d-flex align-items-end">
-                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
-                                <span class="ml-1 fw-bold text-secondary">KR-04</span>
+                    <div id="user_story4" class="all_user_story">
+                        <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page4" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
+                            <div class="story_info d-flex justify-content-between mt-2" >
+                                <div class="d-flex align-items-end">
+                                    <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
+                                    <span class="ml-1 fw-bold text-secondary">KR-04</span>
+                                </div>
+                                <img src="images/user.png" width="30px" draggable="false" alt="user">
                             </div>
-                            <img src="images/user.png" width="30px" draggable="false" alt="user">
+                            <input type="hidden" id="description_user4" value="Add description ...">
                         </div>
-                    </div>
-                    <div class="modal fade" id="user_story_home_page4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="user_story_home_page4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">
@@ -434,7 +439,7 @@
                                     </span>
                                     <div class="row">
                                         <span class=" fs-5 text-secondary">Description</span>
-                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                        <textarea id="desc4" class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
                                     </div>
                                     <div class="row mt-3">
                                         <span class=" col-12 fs-5 text-secondary">Activity</span>
@@ -450,15 +455,15 @@
                                         <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
                                     </div>
                                     <div class="mt-3 text-end">
-                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                        <button class="btn"  onclick="update_user_story(4)" style="background: var(--btn); color: white;">save</button>
                                     </div>
                                 </div>
                                 <div class="col p-3">
                                     <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
-                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
-                                            <option value="todo">To do</option>
-                                            <option value="todo" selected>Doing</option>
-                                            <option value="todo" >finished</option>
+                                        <select id="user_etat4" class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                                <option value="0" >To do</option>
+                                                <option value="1" selected>Doing</option>
+                                                <option value="2">Finiched</option>
                                         </select>
                                         <hr>
                                         <span class="mt-3 plr-4 fw-bold">Details</span>
@@ -488,9 +493,11 @@
                             </div>
                             </div>
                         </div>
+                        </div>
                     </div>
                     <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page5" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
+                    <div id="user_story5" class="all_user_story">
+                        <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page5" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
                         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
                         <div class="story_info d-flex justify-content-between mt-2" >
                             <div class="d-flex align-items-end">
@@ -499,8 +506,9 @@
                             </div>
                             <img src="images/user.png" width="30px" draggable="false" alt="user">
                         </div>
-                    </div>
-                    <div class="modal fade" id="user_story_home_page5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <input type="hidden" id="description_user5" value="Add description ...">
+                        </div>
+                        <div class="modal fade" id="user_story_home_page5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered  modal-xl " >
                             <div class="modal-content" style='background: var(--body);'>
                             <div class="modal-header">
@@ -520,7 +528,7 @@
                                     </span>
                                     <div class="row">
                                         <span class=" fs-5 text-secondary">Description</span>
-                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
+                                        <textarea id="desc5" class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
                                     </div>
                                     <div class="row mt-3">
                                         <span class=" col-12 fs-5 text-secondary">Activity</span>
@@ -536,15 +544,15 @@
                                         <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
                                     </div>
                                     <div class="mt-3 text-end">
-                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
+                                        <button class="btn"  onclick="update_user_story(5)" style="background: var(--btn); color: white;">save</button>
                                     </div>
                                 </div>
                                 <div class="col p-3">
                                     <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
-                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
-                                            <option value="todo">To do</option>
-                                            <option value="todo" selected>Doing</option>
-                                            <option value="todo" >finished</option>
+                                        <select id="user_etat5" class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
+                                            <option value="0">To do</option>
+                                            <option value="1" selected >Doing</option>
+                                            <option value="2">Finiched</option>
                                         </select>
                                         <hr>
                                         <span class="mt-3 plr-4 fw-bold">Details</span>
@@ -573,6 +581,7 @@
                                 </div>
                             </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <!-- ------------------- -->
@@ -580,113 +589,9 @@
                 </div>
                 <div id="finish_box" class="user_story p-3 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary ">Finiched</h3>
-                    <!-- ------------------- -->
-                    <div class="story p-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#user_story_home_page6" draggable="true" style="max-width: 300px; background-color: var(--body); box-shadow: var(--box_shadow);">
-                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio animi cumque deleniti quia, atque sapiente laborum laudantium ipsa, natus rem</span>
-                        <div class="story_info d-flex justify-content-between mt-2" >
-                            <div class="d-flex align-items-end">
-                                <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="21px" draggable="false" alt="save">
-                                <span class="ml-1 fw-bold text-secondary">KR-06</span>
-                            </div>
-                            <img src="images/user.png" width="30px" draggable="false" alt="user">
-                        </div>
-                    </div>
-                    <div class="modal fade" id="user_story_home_page6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered  modal-xl " >
-                            <div class="modal-content" style='background: var(--body);'>
-                            <div class="modal-header">
-                                <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
-                                    Detail epic / 
-                                    <div class="d-flex align-items-end ml-1">
-                                        <img src="images/saves.png" style="background: var(--save_color); padding: 4px 0;" width="16px" draggable="false" alt="save">
-                                        <span class="ml-1 ">KR-06</span>
-                                    </div>
-                                </h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body row">
-                                <div class="col-8">
-                                    <span class="text-secondary fs-4">
-                                        - En tant qu'utilisateur, je souhaite pouvoir créer un  Maquette  ++Page 3 : Timer++
-                                    </span>
-                                    <div class="row">
-                                        <span class=" fs-5 text-secondary">Description</span>
-                                        <textarea class="col-12 pt-2 ml-1 mt-2 shadow-sm border" placeholder="Edit description" style="outline: none;" cols="10" rows="5"></textarea>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <span class=" col-12 fs-5 text-secondary">Activity</span>
-                                        <div class="mt-3">
-                                            <span class=" col-12 fs-5 text-secondary">Afficher : </span>
-                                            <button class="btn ml-1 " style="background:  var(--active);">ALL</button> 
-                                            <button class="btn ml-1 shadow" style="background:  var(--active);">Commentaires</button> 
-                                            <button class="btn ml-1 " style="background:  var(--active);">Historique</button>  
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 d-flex gap-2">
-                                        <img src="images/user.png" width="35px" alt="user">
-                                        <input type="text" placeholder="Comment..." class="form-control shadow-sm" style="outline: none;">
-                                    </div>
-                                    <div class="mt-3 text-end">
-                                        <button class="btn" style="background: var(--btn); color: white;">Add Commant</button>
-                                    </div>
-                                </div>
-                                <div class="col p-3">
-                                    <div class="shadow-sm text-secondary" style="min-height: 100%; background-color: white;">
-                                        <select class="border-0 mt-3 plr-4 ml-2 rounded-1 fw-bold text-secondary " style=" background: var(--active);">
-                                            <option value="todo">To do</option>
-                                            <option value="todo" >Doing</option>
-                                            <option value="todo" selected >finished</option>
-                                        </select>
-                                        <hr>
-                                        <span class="mt-3 plr-4 fw-bold">Details</span>
-                                        <hr>
-                                        <div class="d-flex justify-content-between mt-3 plr-4">
-                                            <span class="fw-bold">Responsable</span>
-                                            <span>Rabia Ait Imghi</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between mt-3 plr-4">
-                                            <span class="fw-bold">Labels</span>
-                                            <span>None</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between mt-3 plr-4">
-                                            <span class="fw-bold">Sprint</span>
-                                            <span>Creation Maquete</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between mt-3 plr-4">
-                                            <span class="fw-bold">Story point estimate</span>
-                                            <span>None</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between mt-3 plr-4">
-                                            <span class="fw-bold">Rapporteur</span>
-                                            <span>Rabia Ait Imghi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ------------------- -->
+                    
                 </div>
             </div>
-            <script>
-                function update_user_story(indec){
-                    var user_story = document.getElementById("user_story"+indec);
-                    var user_etat = document.getElementById("user_etat"+indec);
-                    if(user_etat.value == 0){
-                        var user_box = document.getElementById("todo_box");
-                        user_box.appendChild(user_story);
-                    }
-                    if(user_etat.value == 2){
-                        var user_box = document.getElementById("finish_box");
-                        user_box.appendChild(user_story);
-                    }
-                    if(user_etat.value == 1){
-                        var user_box = document.getElementById("doing_box");
-                        user_box.appendChild(user_story);
-                    }
-                }
-            </script>
         </div>
     </section>
 </main>

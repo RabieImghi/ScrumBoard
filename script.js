@@ -49,7 +49,35 @@ var myInput = document.getElementById("myInput");
 myModal?.addEventListener("shown.bs.modal", function () {
   myInput.focus();
 });
-
+function update_user_story(indec){
+  var user_story = document.getElementById("user_story"+indec);
+  var user_etat = document.getElementById("user_etat"+indec);
+  var description_user = document.getElementById("description_user"+indec);
+  var desc = document.getElementById("desc"+indec);
+  description_user.value = desc.value;
+  afiche_detail_user(indec);
+  if(user_etat.value == 0){
+      var user_box = document.getElementById("todo_box");
+      user_box.appendChild(user_story);
+  }
+  if(user_etat.value == 2){
+      var user_box = document.getElementById("finish_box");
+      user_box.appendChild(user_story);
+  }
+  if(user_etat.value == 1){
+      var user_box = document.getElementById("doing_box");
+      user_box.appendChild(user_story);
+  }
+}
+function afiche_detail_user(indec){
+  alert("ok")
+  var description_user = document.getElementById("description_user"+indec);
+  var desc = document.getElementById("desc"+indec);
+  console.log(description_user.value)
+  console.log( desc.value)
+  desc.value=description_user.value;
+  
+}
 // ------------PARTIE filaly*do not touch it if ur not filaly*
 const btn_edit_img = document.getElementById("editPicture");
 const hidden_file = document.getElementById("hiddenFileInput");
