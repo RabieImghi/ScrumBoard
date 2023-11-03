@@ -6,12 +6,16 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body onload="drog_drop_function()">  
 <header class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
     <div class="left-header d-flex align-items-center gap-4  ">
         <div class="left-header-logo w-25">
-            <img src="images/logo.png" class="w-100" alt="logo">
+            <a href="index.html"><img src="images/logo.png" class="w-100" alt="logo"></a>
         </div>
         <nav class="left-header-nav">
             <ul class="d-flex gap-3 list-unstyled mt-4">
@@ -32,8 +36,8 @@
             <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
         </div>
         <nav class="right-header-nav d-flex gap-4">
-            <img width="40px" src="images/alarm.png" alt="alarm">
-            <img width="40px" class="displaynone" src="images/repair.png" alt="setting">
+            <img width="40px" src="images/alarm.png" alt="alarm" />
+          <a href="parametre.html" ><img width="40px"  class="displaynone" src="images/repair.png"  alt="setting" /></a>
             <img width="40px" style="display: block;" src="images/user.png" alt="user" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu d-none MNMB">
                 <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Profil</a></li>
@@ -71,15 +75,125 @@
         <h3 class="text-secondary pt-4 fs-4 fw-bold">PLANIFICATION</h3>
         <nav class="col">
             <ul class="navigation_pages list-unstyled ml-2 ">
-                <li class="plr-4 border mt-3 rounded-1 active"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></a></li>
+                <a href="index.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1 "><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></li></a>
+                <a href="backlog.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></li></a>
+                <a href="chrologe.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1 active"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></li></a>
+                <a href="parametre.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></li></a>
             </ul>
         </nav>
     </section>
     <section id="chronolog_page" class="col p-4">
-
+        <img src="images/menu2.png" width="50px" class="ferme-d-block" onclick="affiche()" alt="menu">
+        <span class="text-secondary">Project > Scrum Board</span>
+        <div class="sprint_info row mt-4">
+            <h4 class="col-5 col-md-8 fw-bold text-secondary">Sprint Name</h4>
+            <div class="timer_sprint col text-end">
+                <img src="images/clock.png" style="width: 6%;" alt="timer"> 
+                <span class="text-secondary">10 days remaining</span>
+                <button class="fw-bold btn ml-2" style="background: var(--btn); color: white;">Finish sprint</button>
+            </div>
+        </div>
+        <div class="users mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="user_infos d-flex flex-wrap gap-1" style="min-width: 50%;">
+                <div class="home-search2 d-flex mt-1">
+                    <input type="search" class="form-control search_input" style="border-radius: 5px 0 0 5px; outline: none;" id="search" placeholder="search">
+                    <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
+                </div>
+                <div class="users_team d-flex gap-2 flex-wrap">
+                    <div class="user_group p-2 mt-1 user_active" style="min-width: 120px; max-width: 120px; cursor: pointer">
+                        <img src="images/user.png" style="width: 20%;" alt="user">
+                        <span class="text-secondary">user name</span>
+                    </div>
+                    <div class="user_group p-2 mt-1" style="min-width: 120px; max-width: 120px; cursor: pointer">
+                        <img src="images/user.png" style="width: 20%;" alt="user">
+                        <span class="text-secondary">user name</span>
+                    </div>
+                    <div class="user_group p-2 mt-1" style="min-width: 120px; max-width: 120px; cursor: pointer">
+                        <img src="images/user.png" style="width: 20%;" alt="user">
+                        <span class="text-secondary">user name</span>
+                    </div>
+                    <div class="text-center rounded-1 p-2 mt-1" style="min-width: 60px; max-width: 60px; background: var(--btn);">
+                        <img src="images/add-user.png" style="width: 60%;" alt="user">
+                    </div>
+                </div>
+            </div>
+            <div class="filtre d-flex flex-wrap gap-3 fw-bold">
+                <div class="user_group p-2 mt-1" style="cursor: pointer">
+                    <span class="text-secondary">Display Setting</span>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-x-scroll mt-2">
+        <table class="table align-middle mb-0 bg-white mt-5">
+            <thead class="bg-light">
+              <tr>
+                <th class="text-secondary">Sprint</th>
+                <th class="text-secondary">Start date </th>
+                <th class="text-secondary">End date</th>
+                <th class="text-secondary text-center">More information</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="img"  style="width: 45px; height: 45px" class="rounded-circle" />
+                    <div class="ms-3">
+                      <p class="fw-bold mb-1 text-secondary">Creation Maquet</p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">12-04-2023</p>
+                </td>
+                <td>
+                    <p class="fw-normal mb-1">19-04-2023</p>
+                </td>
+                <td class="text-center">
+                  <button type="button" class="btn btn-link btn-sm btn-rounded">
+                    <svg data-bs-toggle="modal" data-bs-target="#infoSprin1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 100 100">
+                        <path d="M 50 16 C 38.745078 16 28.536804 19.528325 21.103516 25.289062 C 13.670227 31.0498 9 39.090825 9 48 C 9 56.843516 13.643104 64.803099 20.982422 70.556641 C 20.979022 77.17314 20.872179 82.713759 17.292969 86.292969 A 1.0001 1.0001 0 0 0 18 88 C 24.741238 88 33.13907 85.975155 38.578125 78.707031 C 42.210021 79.527556 46.031696 80 50 80 C 61.254922 80 71.463196 76.471675 78.896484 70.710938 C 86.329773 64.950199 91 56.909175 91 48 C 91 39.090825 86.329773 31.0498 78.896484 25.289062 C 71.463196 19.528325 61.254922 16 50 16 z M 50 18 C 60.836078 18 70.627913 21.410128 77.671875 26.869141 C 84.715837 32.328153 89 39.788175 89 48 C 89 56.211825 84.715837 63.671847 77.671875 69.130859 C 70.627913 74.589872 60.836078 78 50 78 C 45.963088 78 42.07133 77.527971 38.412109 76.652344 A 1.0001 1.0001 0 0 0 37.361328 77.048828 C 32.908474 83.389417 26.082467 85.468934 20.003906 85.837891 C 22.866127 81.619726 23 76.123 23 70.216797 L 23 70.140625 A 1.0001 1.0001 0 0 0 22.605469 69.345703 C 15.3982 63.868957 11 56.317715 11 48 C 11 39.788175 15.284163 32.328153 22.328125 26.869141 C 29.372087 21.410128 39.163922 18 50 18 z M 50 21 C 40.109772 21 31.134601 23.999444 24.609375 28.871094 C 18.084149 33.742743 14 40.513854 14 48 C 14 53.479972 16.189921 58.584917 19.921875 62.830078 A 0.50030972 0.50030972 0 1 0 20.673828 62.169922 C 17.075782 58.077083 15 53.214028 15 48 C 15 40.877146 18.876757 34.397976 25.207031 29.671875 C 31.537305 24.945774 40.312228 22 50 22 C 59.503691 22 68.127545 24.834788 74.427734 29.404297 A 0.50005 0.50005 0 1 0 75.015625 28.595703 C 68.523814 23.887212 59.702309 21 50 21 z M 49.5 28 C 46.495378 28 44 30.214474 44 33 C 44 35.785526 46.495378 38 49.5 38 C 52.504622 38 55 35.785526 55 33 C 55 30.214474 52.504622 28 49.5 28 z M 49.5 29 C 52.018226 29 54 30.814963 54 33 C 54 35.185037 52.018226 37 49.5 37 C 46.981774 37 45 35.185037 45 33 C 45 30.814963 46.981774 29 49.5 29 z M 76.5 29.880859 A 0.50005 0.50005 0 0 0 76.179688 30.767578 C 76.417254 30.9667 76.650339 31.169004 76.878906 31.373047 A 0.50005839 0.50005839 0 1 0 77.544922 30.626953 C 77.307489 30.414996 77.064746 30.206831 76.820312 30.001953 A 0.50005 0.50005 0 0 0 76.5 29.880859 z M 78.78125 31.994141 A 0.50005 0.50005 0 0 0 78.419922 32.847656 C 78.732508 33.170072 79.033765 33.497441 79.326172 33.830078 A 0.50030972 0.50030972 0 0 0 80.078125 33.169922 C 79.774531 32.824559 79.460133 32.485928 79.136719 32.152344 A 0.50005 0.50005 0 0 0 78.78125 31.994141 z M 80.890625 34.494141 A 0.50005 0.50005 0 0 0 80.529297 35.302734 C 83.383758 39.071094 85 43.397373 85 48 C 85 55.122854 81.123243 61.602024 74.792969 66.328125 C 68.462695 71.054226 59.687772 74 50 74 C 48.831137 74 47.676738 73.95713 46.537109 73.873047 A 0.50040144 0.50040144 0 0 0 46.462891 74.871094 C 47.627264 74.957007 48.806863 75 50 75 C 59.890228 75 68.865399 72.000556 75.390625 67.128906 C 81.915851 62.257257 86 55.486146 86 48 C 86 43.162627 84.29371 38.614906 81.326172 34.697266 A 0.50005 0.50005 0 0 0 80.941406 34.494141 A 0.50005 0.50005 0 0 0 80.890625 34.494141 z M 42.5 40 A 0.50005 0.50005 0 0 0 42 40.5 L 42 44.5 A 0.50005 0.50005 0 0 0 42.5 45 L 45.5 45 C 45.781469 45 46 45.218531 46 45.5 L 46 60.5 C 46 60.781469 45.781469 61 45.5 61 L 41.5 61 A 0.50005 0.50005 0 0 0 41 61.5 L 41 65.5 A 0.50005 0.50005 0 0 0 41.5 66 L 59.5 66 A 0.50005 0.50005 0 0 0 60 65.5 L 60 61.5 A 0.50005 0.50005 0 0 0 59.5 61 L 55.5 61 C 55.218531 61 55 60.781469 55 60.5 L 55 40.5 A 0.50005 0.50005 0 0 0 54.5 40 L 42.5 40 z M 43 41 L 54 41 L 54 60.5 C 54 61.322531 54.677469 62 55.5 62 L 59 62 L 59 65 L 42 65 L 42 62 L 45.5 62 C 46.322531 62 47 61.322531 47 60.5 L 47 45.5 C 47 44.677469 46.322531 44 45.5 44 L 43 44 L 43 41 z"></path>
+                    </svg>
+                  </button>
+                </td>
+                <div class="modal fade" id="infoSprin1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered  modal-lg" >
+                        <div class="modal-content" style='background: var(--body);'>
+                        <div class="modal-header">
+                            <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
+                                Detail Sprint Creation de Maquette
+                            </h5>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="d-flex justify-content-around mt-3 fw-bold text-secondary">
+                                <span>Start Date : </span>
+                                <div class="btn fw-bold " style="background: var(--active);">21-1-2024</div>
+                            </div>
+                            <div class="d-flex justify-content-around mt-5 fw-bold text-secondary">
+                                <span>End Date : </span>
+                                <div class="btn fw-bold " style="background: var(--active);">25-1-2024</div>
+                            </div>
+                            <div class="d-flex justify-content-around mt-5 fw-bold text-secondary">
+                                <span>Time Passed : </span>
+                                <div id="timepassed" class="btn fw-bold " style="background: var(--active);" onclick="affichage()">0 day 0 mont 0 year</div>
+                            </div>
+                            <div class="d-flex justify-content-around mt-5 fw-bold text-secondary">
+                                <span>Time Restant : </span>
+                                <div id="timeRes" class="btn fw-bold " style="background: var(--active);"> 0 Min 0 Hours 0 day 0 month 0 year</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+              </tr>
+              
+              <script>
+                
+              </script>
+              
+            </tbody>
+        </table>
+        </div>
     </section>
 </main>
 <script src="script.js"></script>

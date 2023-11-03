@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +17,7 @@
 
     <title>Document</title>
   </head>
-  <body onload="drog_drop_function()">
+  <body>
     <header
       class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
       <div class="left-header d-flex align-items-center gap-4">
@@ -80,11 +81,13 @@
         </div>
         <nav class="right-header-nav d-flex gap-4">
           <img width="40px" src="images/alarm.png" alt="alarm" />
-          <img
-            width="40px"
-            class="displaynone"
-            src="images/repair.png"
-            alt="setting" />
+          <a href="parametre.html"
+            ><img
+              width="40px"
+              class="displaynone"
+              src="images/repair.png"
+              alt="setting"
+          /></a>
           <img
             width="40px"
             style="display: block"
@@ -186,49 +189,96 @@
         <h3 class="text-secondary pt-4 fs-4 fw-bold">PLANIFICATION</h3>
         <nav class="col">
           <ul class="navigation_pages list-unstyled ml-2">
-            <li class="plr-4 border mt-3 rounded-1 active">
-              <a href="#" class="text-secondary text-decoration-none fw-bold"
-                ><img
+            <a
+              href="index.html"
+              class="text-secondary text-decoration-none fw-bold"
+              ><li class="plr-4 border mt-3 rounded-1">
+                <img
                   class="image_icon"
                   src="images/board.png"
-                  alt="Scrum board" /><span class="ml-2">Scrum Board</span></a
-              >
-            </li>
-            <li class="plr-4 border mt-3 rounded-1">
-              <a href="#" class="text-secondary text-decoration-none fw-bold"
-                ><img
+                  alt="Scrum board" /><span class="ml-2">Scrum Board</span>
+              </li></a
+            >
+            <a
+              href="backlog.html"
+              class="text-secondary text-decoration-none fw-bold"
+              ><li class="plr-4 border mt-3 rounded-1">
+                <img
                   class="image_icon"
                   src="images/backlog.png"
-                  alt="backlog" /><span class="ml-2">Backlog</span></a
-              >
-            </li>
-            <li class="plr-4 border mt-3 rounded-1">
-              <a href="#" class="text-secondary text-decoration-none fw-bold"
-                ><img
+                  alt="backlog" /><span class="ml-2">Backlog</span>
+              </li></a
+            >
+            <a
+              href="chrologe.html"
+              class="text-secondary text-decoration-none fw-bold"
+              ><li class="plr-4 border mt-3 rounded-1">
+                <img
                   class="image_icon"
                   src="images/chronological-line.png"
-                  alt="chrono" /><span class="ml-2">Chronologie</span></a
-              >
-            </li>
-            <li class="plr-4 border mt-3 rounded-1">
-              <a href="#" class="text-secondary text-decoration-none fw-bold"
-                ><img
+                  alt="chrono" /><span class="ml-2">Chronologie</span>
+              </li></a
+            >
+            <a
+              href="parametre.html"
+              class="text-secondary text-decoration-none fw-bold"
+              ><li class="plr-4 border mt-3 rounded-1 active">
+                <img
                   class="image_icon"
                   src="images/repair.png"
-                  alt="rapaire" /><span class="ml-2">Project Settings</span></a
-              >
-            </li>
+                  alt="rapaire" /><span class="ml-2">Project Settings</span>
+              </li></a
+            >
           </ul>
         </nav>
       </section>
       <section id="parametr" class="col p-4">
+        <img
+          src="images/menu2.png"
+          width="50px"
+          class="ferme-d-block"
+          onclick="affiche()"
+          alt="menu" />
+
         <p>Projets > parameter de project</p>
-        <div class="Details">
-          <button id="Project_details">Project details</button>
-          <button id="User_details">User details</button>
-        </div>
-        <div class="details_body">
-          <div class="project_details">
+        <style></style>
+        <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab0"
+              data-mdb-toggle="tab"
+              data-mdb-target="#project_details"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true">
+              project_details
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab0"
+              data-mdb-toggle="tab"
+              data-mdb-target="#user_detail"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false">
+              user_detail
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent0">
+          <!-- <div
+            class="tab-pane fade show active"
+            id="home0"
+            role="tabpanel"
+            aria-labelledby="home-tab0">
+            Tab 1 content.
+          </div> -->
+          <div class="tab-pane fade show active" id="project_details">
             <div class="Project_pic">
               <img
                 src="images/repair.png"
@@ -321,36 +371,274 @@
               </div>
             </div>
           </div>
-          <div class="user_detail">
+          <!-- <div
+            class="tab-pane fade"
+            id="profile0"
+            role="tabpanel"
+            aria-labelledby="profile-tab0">
+            Tab 2 content
+          </div> -->
+          <div class="tab-pane fade" id="user_detail">
             <div class="user_search">
               <span><b>User</b></span>
-              <div class="right-header-search d-flex">
-                <input
-                  type="search"
-                  class="form-control search_input"
-                  style="border-radius: 5px 0 0 5px"
-                  id="search"
-                  placeholder="search" />
-                <img
-                  height="39px"
-                  style="border-radius: 0 5px 5px 0"
-                  src="images/search.png"
-                  alt="search" />
-              </div>
-              <!-- <div class="row">
-                <div class="col">
-                  
+              <div
+                class="right-header-search d-flex flex-wrap justify-content-between gap-3">
+                <div class="d-flex">
+                  <input
+                    type="search"
+                    class="form-control search_input"
+                    style="border-radius: 5px 0 0 5px; height: 39px"
+                    id="search"
+                    placeholder="search" />
+                  <img
+                    height="39px"
+                    style="border-radius: 0 5px 5px 0"
+                    src="images/search.png"
+                    alt="search" />
                 </div>
-              </div> -->
+
+                <div class="d-flex align-items-center w-50 gap-1 flex-wrap">
+                  <span style="width: 90px">Group by :</span>
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    style="height: 39px; min-width: 100px; width: 20vw"
+                    id="select_group">
+                    <option value="1">Name</option>
+                    <option value="2">Date</option>
+                    <option value="3">Status</option>
+                  </select>
+                </div>
+              </div>
+              <br />
+              <div class="overflow-x-scroll">
+                <table class="table align-middle mb-0 bg-white">
+                  <thead class="bg-light">
+                    <tr>
+                      <th>user</th>
+                      <th>Last Activity</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="line">
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="images/user.png"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            class="rounded-circle" />
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1" id="name">
+                              Rabie ait Mghir
+                            </p>
+                            <p class="text-muted mb-0" id="mail">
+                              Rabie.ait.Mghir@gmail.com
+                            </p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">26-oct-2023</p>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Active</p>
+                      </td>
+                      <td>
+                        <i
+                          class="fa-solid fa-trash-can"
+                          id="trash"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                        <i
+                          class="fa-solid fa-pen-to-square ml-2"
+                          id="update"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                      </td>
+                    </tr>
+                    <tr id="line">
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="images/user.png"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            class="rounded-circle" />
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1" id="name">
+                              Abdeljalil el filaly
+                            </p>
+                            <p class="text-muted mb-0" id="mail">
+                              Abdeljalil.el.filaly@gmail.com
+                            </p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">26-oct-2023</p>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Active</p>
+                      </td>
+                      <td>
+                        <i
+                          class="fa-solid fa-trash-can"
+                          id="trash"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                        <i
+                          class="fa-solid fa-pen-to-square ml-2"
+                          id="update"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                      </td>
+                    </tr>
+                    <tr id="line">
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="images/user.png"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            class="rounded-circle" />
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1" id="name">Khalid haiddou</p>
+                            <p class="text-muted mb-0" id="mail">
+                              khalid.haiddou@gmail.com
+                            </p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">26-oct-2023</p>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Active</p>
+                      </td>
+                      <td>
+                        <i
+                          class="fa-solid fa-trash-can"
+                          id="trash"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                        <i
+                          class="fa-solid fa-pen-to-square ml-2"
+                          id="update"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                      </td>
+                    </tr>
+                    <tr id="line">
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="images/user.png"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            class="rounded-circle" />
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1" id="name">oumaima</p>
+                            <p class="text-muted mb-0" id="mail">
+                              oumaima@gmail.com
+                            </p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">26-oct-2023</p>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Active</p>
+                      </td>
+                      <td>
+                        <i
+                          class="fa-solid fa-trash-can"
+                          id="trash"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                        <i
+                          class="fa-solid fa-pen-to-square ml-2"
+                          id="update"
+                          style="font-size: 25px; color: rgb(31, 31, 31)"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          id="btn_update"
+          class="btn btn-primary d-none"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          Launch static backdrop modal
+        </button>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">update User</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label"
+                      >Name:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="recipient-name" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label"
+                      >email</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="recipient-email" />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  id="udate_form"
+                  class="p-2 text-white rounded-1"
+                  style="background-color: var(--btn)">
+                  Update
+                </button>
+                <button
+                  type="button"
+                  id="close_btn"
+                  class="btn btn-secondary d-none"
+                  data-bs-dismiss="modal">
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
   </body>
 </html>

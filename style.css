@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 :root {
   --heade-nav: #fffffb;
@@ -16,6 +16,7 @@ body {
   background-color: var(--body) !important;
 }
 /*Header and Home page style*/
+
 .right-header-search .search_input {
   box-shadow: var(--box_shadow);
 }
@@ -41,6 +42,9 @@ header {
 }
 .navigation_pages img {
   width: 10%;
+}
+.user_story::-webkit-scrollbar {
+  display: none;
 }
 .ml-2 {
   margin-left: 20px;
@@ -70,17 +74,6 @@ header {
 .ferme-d-block {
   display: none;
 }
-/* .user_group {
-  background: var(--active);
-}
-.user_active,
-.user_group:hover {
-  box-shadow: var(--box_shadow);
-}
-.ferme-d-block{
-    display: none;
-} */
-
 @media screen and (max-width: 1080px) {
   .navigation_pages img {
     width: 5%;
@@ -121,6 +114,9 @@ header {
     width: 80%;
   }
   @media screen and (max-width: 790px) {
+    .boxs_mobil.justify-content-around {
+      justify-content: center !important;
+    }
     .d-flex .right-header-search {
       display: none !important;
     }
@@ -179,16 +175,7 @@ button {
   display: flex;
   gap: 13px;
 }
-#parametr #Project_details,
-#User_details {
-  background-color: var(--heade-nav);
-  border-radius: 5px;
-  height: 30px;
-  width: 135px;
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 20px;
-}
+
 #parametr #Project_details {
   box-shadow: var(--box_shadow);
 }
@@ -228,6 +215,7 @@ button {
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 #parametr .user_picking {
   border: 1px solid;
@@ -245,10 +233,46 @@ button {
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
+  cursor: pointer;
 }
+
 #parametr .user_detail {
   padding: 30px;
 }
+#parametr .user_detail span {
+  font-weight: bold;
+}
+#parametr .user_detail p {
+  display: inline-block;
+}
+#parametr .user_detail i {
+  font-size: 30px;
+  text-align: center;
+}
+#parametr table {
+  min-width: 570px;
+}
+#parametr .overflow-x-scroll::-webkit-scrollbar {
+  display: none;
+}
 /* page backlog */
-#backlog_page {
+#backlog_page .input {
+  width: 10%;
+}
+#backlog_page .form-select {
+  background-color: #ffffd9;
+}
+
+#backlog_page .container-fluid img {
+  width: 7%;
+}
+.width-img img {
+  width: 5%;
+}
+#select-modal {
+  width: 20%;
+  background-color: #08dc40;
+}
+.user_story_scrol::-webkit-scrollbar{
+  display: none;
 }
