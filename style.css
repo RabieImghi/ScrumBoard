@@ -16,6 +16,7 @@ body {
   background-color: var(--body) !important;
 }
 /*Header and Home page style*/
+
 .right-header-search .search_input {
   box-shadow: var(--box_shadow);
 }
@@ -41,6 +42,9 @@ header {
 }
 .navigation_pages img {
   width: 10%;
+}
+.user_story::-webkit-scrollbar {
+  display: none;
 }
 .ml-2 {
   margin-left: 20px;
