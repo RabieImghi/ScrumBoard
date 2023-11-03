@@ -116,3 +116,34 @@ for (let i = 0; i < Ln.length; i++) {
     Ln[i].remove();
   });
 }
+// ------------PARTIE KHALID*do not touch it if ur not KHALID*
+//timeRes
+
+// lWe9t li bA9i 
+var countDownDate = new Date("21 jan, 2024 15:37:25").getTime();
+
+var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    
+    var distance = countDownDate - now;
+
+    var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 30 * 12));
+    var mounths = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("timeRes").innerHTML = years + "y " + mounths + "m " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timeRes").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+
+
+
+ 

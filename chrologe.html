@@ -7,7 +7,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <title>Document</title>
 </head>
-<body onload="drog_drop_function()">  
+<body >  
 <header class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
     <div class="left-header d-flex align-items-center gap-4  ">
         <div class="left-header-logo w-25">
@@ -152,7 +152,7 @@
                   </button>
                 </td>
                 <div class="modal fade" id="infoSprin1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered  modal " >
+                    <div class="modal-dialog modal-dialog-centered  modal-lg" >
                         <div class="modal-content" style='background: var(--body);'>
                         <div class="modal-header">
                             <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
@@ -170,17 +170,21 @@
                             </div>
                             <div class="d-flex justify-content-around mt-5 fw-bold text-secondary">
                                 <span>Time Passed : </span>
-                                <div class="btn fw-bold " style="background: var(--active);">0 day 0 mont 0 year</div>
+                                <div id="timepassed" class="btn fw-bold " style="background: var(--active);" onclick="affichage()">0 day 0 mont 0 year</div>
                             </div>
                             <div class="d-flex justify-content-around mt-5 fw-bold text-secondary">
                                 <span>Time Restant : </span>
-                                <div id="timeRes" class="btn fw-bold " style="background: var(--active);">0 day 0 mont 0 year</div>
+                                <div id="timeRes" class="btn fw-bold " style="background: var(--active);"> 0 Min 0 Hours 0 day 0 month 0 year</div>
                             </div>
                         </div>
                         </div>
                     </div>
                 </div>
               </tr>
+              
+              <script>
+                
+              </script>
               
             </tbody>
         </table>
