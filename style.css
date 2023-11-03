@@ -264,3 +264,6 @@ button {
   width: 20%;
   background-color: #08dc40;
 }
+.user_story_scrol::-webkit-scrollbar{
+  display: none;
+}
