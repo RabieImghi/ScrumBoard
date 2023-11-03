@@ -98,11 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
   btn_edit_img?.addEventListener("click", () => {
     hidden_file.click();
   });
-  hidden_file?.addEventListener("change", (event) => {
-    console.log(prj_pic.src);
-    prj_pic.src = URL.createObjectURL(event.target.files[0]);
-    console.log(prj_pic.src);
-  });
 });
 
 user_pick?.addEventListener("click", () => {
@@ -116,36 +111,70 @@ user_pick?.addEventListener("click", () => {
   }
 });
 function reSort(element) {
-  user_elements.forEach((userElement, index) => {
+  user_elements.forEach((userElement) => {
     userElement.removeAttribute("class");
   });
 
   element.setAttribute("class", "d-none");
   user_default.innerHTML = element.innerHTML;
 }
-const elements = document.querySelectorAll("*");
-function gen(element, eltoadd) {
-  let i = 0;
-  elements.forEach((element) => {
-    if (element.id === eltoadd) {
-      i++;
-      element.id = eltoadd + i;
-      console.log(element);
-    }
-  });
-}
 const P = line?.closest("tr");
 const L = trash?.closest("tr");
-document.addEventListener("DOMContentLoaded", () => {
-  gen(L, "line");
-  gen(P, "trash");
-});
+document.addEventListener("DOMContentLoaded", () => {});
 let Ln = document.querySelectorAll("#line");
 let Tr = document.querySelectorAll("#trash");
 for (let i = 0; i < Ln.length; i++) {
-  console.log(Ln[i]);
-  console.log(Tr[i]);
   Tr[i].addEventListener("click", () => {
     Ln[i].remove();
   });
 }
+
+const update = document.querySelectorAll("#update");
+const btn_update = document.getElementById("btn_update");
+const new_name = document.getElementById("recipient-name");
+const new_mail = document.getElementById("recipient-email");
+const nam = document.querySelectorAll("#name");
+const mail = document.querySelectorAll("#mail");
+const update_form = document.getElementById("udate_form");
+
+for (let i = 0; i < update.length; i++) {
+  update[i]?.addEventListener("click", () => {
+    btn_update.click();
+  });
+}
+
+function generateId(element) {
+  let elements = document.querySelectorAll("#" + element);
+  let n = 0;
+  elements.forEach((ele) => {
+    n++;
+    ele.id = element + "_" + n;
+  });
+}
+
+generateId("trash");
+generateId("update");
+generateId("line");
+generateId("mail");
+generateId("name");
+
+update?.forEach((element, index) => {
+  element.addEventListener("click", () => {
+    console.log(element.id);
+    let nom = document.getElementById("name_" + (index + 1));
+    let em = document.getElementById("mail_" + (index + 1));
+    console.log(nom.innerHTML);
+    var eml = new_mail.value;
+    update_form?.addEventListener("click", () => {
+      let email_reg = /^[A-Za-z0-9]+@[A-Za-z].+[A-Za-z]{2,4}$/;
+
+      if (new_name.value == "" || new_mail.value == "") {
+        alert("please write somthing");
+      } else if (eml.match(email_reg)) {
+        alert("ok");
+        nom.innerHTML = new_name.value;
+        em.innerHTML = new_mail.value;
+      }
+    });
+  });
+});
