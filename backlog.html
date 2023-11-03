@@ -11,7 +11,7 @@
 <header class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
     <div class="left-header d-flex align-items-center gap-4  ">
         <div class="left-header-logo w-25">
-            <img src="images/logo.png" class="w-100" alt="logo">
+            <a href="index.html"><img src="images/logo.png" class="w-100" alt="logo"></a>
         </div>
         <nav class="left-header-nav">
             <ul class="d-flex gap-3 list-unstyled mt-4">
@@ -32,8 +32,8 @@
             <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
         </div>
         <nav class="right-header-nav d-flex gap-4">
-            <img width="40px" src="images/alarm.png" alt="alarm">
-            <img width="40px" class="displaynone" src="images/repair.png" alt="setting">
+            <i class='bx bx-bell fs-1 text-secondary' ></i>
+            <a href="parametre.html"><i class='bx bx-cog fs-1 text-secondary'></i></a>
             <img width="40px" style="display: block;" src="images/user.png" alt="user" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu d-none MNMB">
                 <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Profil</a></li>
@@ -71,14 +71,15 @@
         <h3 class="text-secondary pt-4 fs-4 fw-bold">PLANIFICATION</h3>
         <nav class="col">
             <ul class="navigation_pages list-unstyled ml-2 ">
-                <li class="plr-4 border mt-3 rounded-1 active"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></a></li>
+                <a href="index.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1 "><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></li></a>
+                <a href="backlog.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1 active"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></li></a>
+                <a href="chrologe.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></li></a>
+                <a href="parametre.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></li></a>
             </ul>
         </nav>
     </section>
     <section id="backlog_page" class="col p-4">
+        <img src="images/menu2.png" width="50px" class="ferme-d-block" onclick="affiche()" alt="menu">
         <h6 class="m-1 text text-secondary">Project > backlog</h6>
         <div class="m-2 d-flex justify-content-between">
             <h5>Project Name</h5>
