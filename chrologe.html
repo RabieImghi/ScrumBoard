@@ -6,12 +6,16 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body onload="drog_drop_function()">  
 <header class="d-flex justify-content-between align-items-center gap-6 position-sticky sticky-top">
     <div class="left-header d-flex align-items-center gap-4  ">
         <div class="left-header-logo w-25">
-            <img src="images/logo.png" class="w-100" alt="logo">
+            <a href="index.html"><img src="images/logo.png" class="w-100" alt="logo"></a>
         </div>
         <nav class="left-header-nav">
             <ul class="d-flex gap-3 list-unstyled mt-4">
@@ -32,8 +36,8 @@
             <img height="39px"  style="border-radius: 0 5px 5px 0;" src="images/search.png" alt="search">
         </div>
         <nav class="right-header-nav d-flex gap-4">
-            <img width="40px" src="images/alarm.png" alt="alarm">
-            <img width="40px" class="displaynone" src="images/repair.png" alt="setting">
+            <img width="40px" src="images/alarm.png" alt="alarm" />
+          <a href="parametre.html" ><img width="40px"  class="displaynone" src="images/repair.png"  alt="setting" /></a>
             <img width="40px" style="display: block;" src="images/user.png" alt="user" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu d-none MNMB">
                 <li><a href="#" class="text-decoration-none text-secondary dropdown-item fw-bold p-2 pl-2">Profil</a></li>
@@ -71,14 +75,15 @@
         <h3 class="text-secondary pt-4 fs-4 fw-bold">PLANIFICATION</h3>
         <nav class="col">
             <ul class="navigation_pages list-unstyled ml-2 ">
-                <li class="plr-4 border mt-3 rounded-1 active"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></a></li>
-                <li class="plr-4 border mt-3 rounded-1"><a href="#" class="text-secondary text-decoration-none fw-bold"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></a></li>
+                <a href="index.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1 active"><img class="image_icon" src="images/board.png" alt="Scrum board"><span class="ml-2">Scrum Board</span></li></a>
+                <a href="backlog.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/backlog.png" alt="backlog"><span class="ml-2">Backlog</span></li></a>
+                <a href="chrologe.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/chronological-line.png" alt="chrono"><span class="ml-2">Chronologie</span></li></a>
+                <a href="parametre.html" class="text-secondary text-decoration-none fw-bold"><li class="plr-4 border mt-3 rounded-1"><img class="image_icon"  src="images/repair.png" alt="rapaire"><span class="ml-2">Project Settings</span></li></a>
             </ul>
         </nav>
     </section>
     <section id="chronolog_page" class="col p-4">
+        <img src="images/menu2.png" width="50px" class="ferme-d-block" onclick="affiche()" alt="menu">
         <span class="text-secondary">Project > Scrum Board</span>
         <div class="sprint_info row mt-4">
             <h4 class="col-5 col-md-8 fw-bold text-secondary">Sprint Name</h4>
@@ -152,7 +157,7 @@
                   </button>
                 </td>
                 <div class="modal fade" id="infoSprin1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered  modal " >
+                    <div class="modal-dialog modal-dialog-centered  modal-lg" >
                         <div class="modal-content" style='background: var(--body);'>
                         <div class="modal-header">
                             <h5 class="modal-title d-flex gap-3 fw-bold text-secondary" id="exampleModalLabel">
@@ -170,17 +175,21 @@
                             </div>
                             <div class="d-flex justify-content-around mt-5 fw-bold text-secondary">
                                 <span>Time Passed : </span>
-                                <div class="btn fw-bold " style="background: var(--active);">0 day 0 mont 0 year</div>
+                                <div id="timepassed" class="btn fw-bold " style="background: var(--active);" onclick="affichage()">0 day 0 mont 0 year</div>
                             </div>
                             <div class="d-flex justify-content-around mt-5 fw-bold text-secondary">
                                 <span>Time Restant : </span>
-                                <div id="timeRes" class="btn fw-bold " style="background: var(--active);">0 day 0 mont 0 year</div>
+                                <div id="timeRes" class="btn fw-bold " style="background: var(--active);"> 0 Min 0 Hours 0 day 0 month 0 year</div>
                             </div>
                         </div>
                         </div>
                     </div>
                 </div>
               </tr>
+              
+              <script>
+                
+              </script>
               
             </tbody>
         </table>
