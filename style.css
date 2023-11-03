@@ -249,7 +249,12 @@ button {
   font-size: 30px;
   text-align: center;
 }
-
+#parametr table {
+  min-width: 570px;
+}
+#parametr .overflow-x-scroll::-webkit-scrollbar {
+  display: none;
+}
 /* page backlog */
 #backlog_page .input {
   width: 10%;

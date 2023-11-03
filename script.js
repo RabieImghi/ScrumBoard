@@ -49,34 +49,33 @@ var myInput = document.getElementById("myInput");
 myModal?.addEventListener("shown.bs.modal", function () {
   myInput.focus();
 });
-function update_user_story(indec){
-  var user_story = document.getElementById("user_story"+indec);
-  var user_etat = document.getElementById("user_etat"+indec);
-  var description_user = document.getElementById("description_user"+indec);
-  var desc = document.getElementById("desc"+indec);
+function update_user_story(indec) {
+  var user_story = document.getElementById("user_story" + indec);
+  var user_etat = document.getElementById("user_etat" + indec);
+  var description_user = document.getElementById("description_user" + indec);
+  var desc = document.getElementById("desc" + indec);
   description_user.value = desc.value;
   afiche_detail_user(indec);
-  if(user_etat.value == 0){
-      var user_box = document.getElementById("todo_box");
-      user_box.appendChild(user_story);
+  if (user_etat.value == 0) {
+    var user_box = document.getElementById("todo_box");
+    user_box.appendChild(user_story);
   }
-  if(user_etat.value == 2){
-      var user_box = document.getElementById("finish_box");
-      user_box.appendChild(user_story);
+  if (user_etat.value == 2) {
+    var user_box = document.getElementById("finish_box");
+    user_box.appendChild(user_story);
   }
-  if(user_etat.value == 1){
-      var user_box = document.getElementById("doing_box");
-      user_box.appendChild(user_story);
+  if (user_etat.value == 1) {
+    var user_box = document.getElementById("doing_box");
+    user_box.appendChild(user_story);
   }
 }
-function afiche_detail_user(indec){
-  alert("ok")
-  var description_user = document.getElementById("description_user"+indec);
-  var desc = document.getElementById("desc"+indec);
-  console.log(description_user.value)
-  console.log( desc.value)
-  desc.value=description_user.value;
-  
+function afiche_detail_user(indec) {
+  alert("ok");
+  var description_user = document.getElementById("description_user" + indec);
+  var desc = document.getElementById("desc" + indec);
+  console.log(description_user.value);
+  console.log(desc.value);
+  desc.value = description_user.value;
 }
 // ------------PARTIE filaly*do not touch it if ur not filaly*
 const btn_edit_img = document.getElementById("editPicture");
@@ -150,26 +149,25 @@ function generateId(element) {
 generateId("trash");
 generateId("update");
 generateId("line");
-generateId("mail");
-generateId("name");
+
+let close_btn = document.getElementById("close_btn");
+let email_reg = /^[A-Za-z0-9]+@[A-Za-z].+[A-Za-z]{2,4}$/;
 
 update?.forEach((element, index) => {
+  let nom = document.querySelectorAll("#name");
+  let em = document.querySelectorAll("#mail");
   element.addEventListener("click", () => {
     console.log(element.id);
-    let nom = document.getElementById("name_" + (index + 1));
-    let em = document.getElementById("mail_" + (index + 1));
-    console.log(nom.innerHTML);
-    var eml = new_mail.value;
+    console.log(nom[index].innerHTML);
     update_form?.addEventListener("click", () => {
-      let email_reg = /^[A-Za-z0-9]+@[A-Za-z].+[A-Za-z]{2,4}$/;
-
-      if (new_name.value == "" || new_mail.value == "") {
-        alert("please write somthing");
-      } else if (eml.match(email_reg)) {
-        alert("ok");
-        nom.innerHTML = new_name.value;
-        em.innerHTML = new_mail.value;
-      }
+      // if (new_name.value == "" || new_mail.value == "") {
+      //   alert("please write somthing");
+      // } else if (new_mail.value.match(email_reg)) {
+      //   alert("ok");
+      nom[index].innerHTML = new_name.value;
+      em[index].textContent = new_mail.value;
+      close_btn.click();
+      // }
     });
   });
 });
