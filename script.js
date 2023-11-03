@@ -52,9 +52,6 @@ myModal?.addEventListener("shown.bs.modal", function () {
 function update_user_story(indec) {
   var user_story = document.getElementById("user_story" + indec);
   var user_etat = document.getElementById("user_etat" + indec);
-  var description_user = document.getElementById("description_user" + indec);
-  var desc = document.getElementById("desc" + indec);
-  description_user.value = desc.value;
   afiche_detail_user(indec);
   if (user_etat.value == 0) {
     var user_box = document.getElementById("todo_box");
@@ -69,13 +66,22 @@ function update_user_story(indec) {
     user_box.appendChild(user_story);
   }
 }
-function afiche_detail_user(indec) {
-  alert("ok");
+function update_user_story_desc(indec) {
   var description_user = document.getElementById("description_user" + indec);
   var desc = document.getElementById("desc" + indec);
-  console.log(description_user.value);
-  console.log(desc.value);
+  description_user.value = desc.value;
+}
+function afiche_detail_user(indec) {
+  var description_user = document.getElementById("description_user" + indec);
+  var desc = document.getElementById("desc" + indec);
   desc.value = description_user.value;
+}
+function openInput(indec) {
+  var input = document.getElementById("inputOpen" + indec);
+  input.removeAttribute("readonly");
+  window.addEventListener("click", function () {
+    input.setAttribute("readonly", "");
+  });
 }
 // ------------PARTIE filaly*do not touch it if ur not filaly*
 const btn_edit_img = document.getElementById("editPicture");
@@ -167,7 +173,6 @@ update?.forEach((element, index) => {
       nom[index].innerHTML = new_name.value;
       em[index].textContent = new_mail.value;
       close_btn.click();
-      // }
     });
   });
 });
