@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" ></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body onload="drog_drop_function()">  
@@ -137,7 +138,7 @@
                 </div>
             </div>
             <div class="users_story w-100 d-flex flex-wrap boxs_mobil justify-content-center">
-                <div id="todo_box" class="user_story p-3 pt-0 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
+                <div id="todo_box" class="user_story  p-3 pt-0 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary w-100 position-sticky  sticky-top pt-2" style="height: 40px;  background: white">
                        <input type="text" class="fw-bold text-secondary" style="outline: none; border: none;  background: white" value=" To Do" readonly ondblclick="openInput(1)" id="inputOpen1">
                     </h3>
@@ -410,7 +411,7 @@
                     </div>
                     <!-- ------------------- -->
                 </div>
-                <div id="doing_box" class="user_story p-3 pt-0 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
+                <div id="doing_box" class="user_story user_story2 p-3 pt-0 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary w-100 position-sticky  sticky-top pt-2" style="height: 40px;  background: white;">
                         <input type="text" class="fw-bold text-secondary" style="outline: none; border: none;  background: white;" value="Doing" readonly ondblclick="openInput(2)" id="inputOpen2">
                      </h3>
@@ -595,13 +596,21 @@
                     <!-- ------------------- -->
 
                 </div>
-                <div id="finish_box" class="user_story p-3 pt-0 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
+                <div id="finish_box" class="user_story user_story3 p-3 pt-0 ml-2 mt-4 overflow-y-scroll" style="box-shadow: var(--box_shadow); min-width: 350px; height: 60vh; background: white;"> 
                     <h3 class="fw-bold text-secondary w-100 position-sticky  sticky-top pt-2" style="height: 40px;  background: white;">
                         <input type="text" class="fw-bold text-secondary" style="outline: none; border: none;  background: white ;" value="Finished" readonly ondblclick="openInput(3)" id="inputOpen3">
                      </h3>
                     
                 </div>
             </div>
+            <script>
+                const dragArea = document.getElementById("todo_box");
+                const dragArea2 = document.getElementById("doing_box");
+                const dragArea3 = document.getElementById("finish_box");
+                new Sortable(dragArea, { Animation: 350})
+                new Sortable(dragArea2, { Animation: 350})
+                new Sortable(dragArea3, { Animation: 350})
+            </script>
         </div>
     </section>
 </main>
