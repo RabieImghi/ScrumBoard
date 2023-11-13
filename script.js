@@ -155,23 +155,27 @@ function generateId(element) {
 generateId("trash");
 generateId("update");
 generateId("line");
+generateId("name");
+generateId("mail");
 
 let close_btn = document.getElementById("close_btn");
 let email_reg = /^[A-Za-z0-9]+@[A-Za-z].+[A-Za-z]{2,4}$/;
+let cur_name;
+let cur_mail;
 
 update?.forEach((element, index) => {
-  let nom = document.querySelectorAll("#name");
-  let em = document.querySelectorAll("#mail");
   element.addEventListener("click", () => {
-    console.log(element.id);
-    console.log(nom[index].innerHTML);
+    let nom = document.getElementById("name_" + (index + 1));
+    let em = document.getElementById("mail_" + (index + 1));
     update_form?.addEventListener("click", () => {
       // if (new_name.value == "" || new_mail.value == "") {
       //   alert("please write somthing");
       // } else if (new_mail.value.match(email_reg)) {
       //   alert("ok");
-      nom[index].innerHTML = new_name.value;
-      em[index].textContent = new_mail.value;
+      cur_name = nom;
+      cur_mail = mail;
+      cur_name = new_name.value;
+      cur.textContent = new_mail.value;
       close_btn.click();
     });
   });
