@@ -190,8 +190,9 @@ var x = setInterval(function() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    document.getElementById("timepassed").innerHTML = years + "y " + mounths + "m " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    var timepassed = document.getElementById("timepassed")
+    if(timepassed)
+    timepassed.innerHTML = years + "y " + mounths + "m " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
     if (distance < 0) {
         clearInterval(x);
@@ -219,7 +220,7 @@ function deleteDiv(indice)
   elements[0].remove();
 }
 
-document.getElementById("add").addEventListener('click', function(){
+document.getElementById("add")?.addEventListener('click', function(){
   const id = Math.floor(Math.random() * (1 - 1000000 + 1)) + 1000000;
   const dynamicContent = `
           <div style="width: 99%;" class="row border rounded-1 mt-1 p-2 align-items-center modal-1">
@@ -277,4 +278,5 @@ document.getElementById("add").addEventListener('click', function(){
 })
 
 const dragArea = document.getElementById("userGroups");
+if(dragArea)
 new Sortable(dragArea)
