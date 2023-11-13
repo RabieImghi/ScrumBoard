@@ -180,7 +180,6 @@ update?.forEach((element, index) => {
 var countDownDate = new Date("21 jan, 2024 15:37:25").getTime();
 
 var x = setInterval(function() {
-
     var now = new Date().getTime();
     
     var distance = countDownDate - now;
@@ -192,10 +191,59 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-    document.getElementById("timeRes").innerHTML = years + "y " + mounths + "m " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById("timepassed").innerHTML = years + "y " + mounths + "m " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    var nowRest = new Date("25 jan, 2024 15:37:25").getTime();
     
+    var distanceRest =  nowRest - countDownDate ;
+    distanceRest = distanceRest-1000
+
+    var yearsRest = Math.floor(distanceRest / (1000 * 60 * 60 * 24 * 30 * 12));
+    var mounthsRest = Math.floor(distanceRest / (1000 * 60 * 60 * 24 * 30));
+    var daysRest = Math.floor(distanceRest / (1000 * 60 * 60 * 24));
+    var hoursRest = Math.floor((distanceRest % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutesRest = Math.floor((distanceRest % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsRest = Math.floor((distanceRest % (1000 * 60)) / 1000);
+    document.getElementById("timeRes").innerHTML = yearsRest + "y " + mounthsRest + "m " + daysRest + "d " + hoursRest + "h " + minutesRest + "m " + secondsRest + "s ";
+    console.log(distanceRest)
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("timeRes").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+
+// var x = setInterval(function() {
+//   console.log("something")
+//     var nowRest = new Date("25 jan, 2024 15:37:25").getTime();
+    
+//     var distanceRest = countDownDate - nowRest;
+
+//     var yearsRest = Math.floor(distanceRest / (1000 * 60 * 60 * 24 * 30 * 12));
+//     var mounthsRest = Math.floor(distanceRest / (1000 * 60 * 60 * 24 * 30));
+//     var daysRest = Math.floor(distanceRest / (1000 * 60 * 60 * 24));
+//     var hoursRest = Math.floor((distanceRest % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutesRest = Math.floor((distanceRest % (1000 * 60 * 60)) / (1000 * 60));
+//     var secondsRest = Math.floor((distanceRest % (1000 * 60)) / 1000);
+
+//     var rightNow = new Date().getTime();
+  
+//     var distanceTimePassed = countDownDate - rightNow;
+  
+//     var yearsTimePassed = Math.floor(distanceTimePassed / (1000 * 60 * 60 * 24 * 30 * 12));
+//     var mounthsTimePassed = Math.floor(distanceTimePassed / (1000 * 60 * 60 * 24 * 30));
+//     var daysTimePassed = Math.floor(distanceTimePassed / (1000 * 60 * 60 * 24));
+//     var hoursTimePassed = Math.floor((distanceTimePassed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutesTimePassed = Math.floor((distanceTimePassed % (1000 * 60 * 60)) / (1000 * 60));
+//     var secondsTimePassed = Math.floor((distanceTimePassed % (1000 * 60)) / 1000);
+//     console.log(rightNow)
+//     document.getElementById("timepassed").innerHTML = yearsTimePassed + "y " + mounthsTimePassed + "m " + daysTimePassed + "d " + hoursTimePassed + "h " + minutesTimePassed + "m " + secondsTimePassed + "s ";
+    
+//     document.getElementById("timeRes").innerHTML = years + "y " + mounths + "m " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    
+//     if (distance < 0) {
+//         clearInterval(x);
+//         document.getElementById("timeRes").innerHTML = "EXPIRED";
+//     }
+// }, 1000);
