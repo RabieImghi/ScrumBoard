@@ -4,7 +4,7 @@ function drog_drop_function() {
   let todo_box = document.getElementById("todo_box");
   let doing_box = document.getElementById("doing_box");
   let finish_box = document.getElementById("finish_box");
-  for (list_story of lists_story_user) {
+  for (list_story of lists_story_user) { // for (int i=0; i<lists_story_user.lenght; i++){ lists_story_user[i] }
     list_story.addEventListener("dragstart", function (e) {
       let selected = e.target;
       todo_box.addEventListener("dragover", function (e) {
