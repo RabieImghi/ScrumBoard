@@ -218,10 +218,11 @@ function updateDescription(indice)
   text.innerHTML =desscription.value; 
 
 }
-function deleteDiv(indice)
-{
-  var elements = document.getElementsByClassName('group_user'+ indice);
-  elements[0].remove();
+function deleteDiv(indice) {
+  var element = document.querySelector('.group_user' + indice);
+      if (element) {
+      element.remove();
+  }
 }
 
 document.getElementById("add")?.addEventListener('click', function(){
